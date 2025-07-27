@@ -63,8 +63,11 @@ const Products = () => {
     <section id="products" ref={sectionRef} className="py-20 bg-card">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 scroll-animate">
+          <h1 className='text-s font-bold font-barlow text-primary uppercase mb-3 scroll-animate'>
             Our Products
+          </h1>
+          <h2 className="text-4xl md:text-5xl font-playfair mb-6 scroll-animate">
+            For Lasting Glow & Youthful Skin
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto scroll-animate">
             Discover our carefully curated collection of premium skincare products. Each product is selected 
@@ -75,7 +78,7 @@ const Products = () => {
         <div className="grid lg:grid-cols-2 xl:grid-cols-4 gap-8 mb-16">
           {products.map((product, index) => (
             <div key={index} className="scroll-animate">
-              <div className="bg-background rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group h-full">
+              <div className="bg-background rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group ">
                 <div className="relative h-48 overflow-hidden">
                   <img
                     src={product.image}
@@ -152,7 +155,7 @@ const Products = () => {
             </div>
           </div>
           <Button 
-            className="btn-luxury text-lg px-8 py-4"
+            className="btn-luxury px-10 py-8 text-lg"
             onClick={() => window.open('https://wa.link/wg0gmt', '_blank')}
           >
             Contact Us for Product Information

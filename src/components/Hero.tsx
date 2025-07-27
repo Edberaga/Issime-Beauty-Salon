@@ -11,28 +11,28 @@ const Hero = () => {
   const slides = [
     {
       image: heroSalon,
-      title: "RELAX AND ENJOY THE ULTIMATE SALON EXPERIENCE",
-      subtitle: "WAVE MY STYLE",
-      description: "Discover the perfect blend of luxury and wellness at Issime Beauty Salon"
+      title: "Issime Beauty Salon",
+      subtitle: "Where Elegance Meets Natural Beauty",
+      description: "As a trusted beauty salon in Malaysia, Issime offers luxurious treatments designed to enhance your natural glow and relax your senses in style."
     },
     {
       image: spaImage,
-      title: "PROFESSIONAL SPA TREATMENTS",
-      subtitle: "REJUVENATE YOUR SOUL",
-      description: "Experience our signature full body massage and anti-aging treatments"
+      title: "Spa & Full Body Massage",
+      subtitle: "Relax, Rejuvenate, Recharge",
+      description: "Indulge in calming spa rituals and our signature full body massage, tailored to melt away stress and leave you feeling deeply restored."
     },
     {
       image: antiAgingImage,
-      title: "YOUTHFUL SKIN WITH NATURAL FACE CLEANSING",
-      subtitle: "ANTI-AGING EXPERTISE",
-      description: "Advanced skincare treatments for radiant, youthful-looking skin"
+      title: "Anti-Aging Treatments",
+      subtitle: "Naturally Youthful, Radiantly You",
+      description: "Advanced skincare treatments for youthful-looking skin. Experience our anti aging treatments for youthful skin that glows from within."
     }
   ];
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    }, 15000);
 
     return () => clearInterval(timer);
   }, [slides.length]);
@@ -70,7 +70,7 @@ const Hero = () => {
                 alt={`Issime Beauty Salon - ${slide.title}`}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-black/40" />
+              <div className="absolute inset-0 bg-black/60" />
               
               {/* Content */}
               <div className="absolute inset-0 flex items-center justify-center">
@@ -86,7 +86,7 @@ const Hero = () => {
                   </p>
                   <Button
                     onClick={() => scrollToSection('about')}
-                    className="btn-luxury text-lg px-8 py-4 animate-fade-in-up"
+                    className="btn-luxury animate-fade-in-up"
                   >
                     Make Appointment
                   </Button>

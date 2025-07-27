@@ -29,7 +29,7 @@ const Services = () => {
   const services = [
     {
       title: "Anti-Aging Treatments",
-      description: "Advanced facial treatments designed to reduce signs of aging and promote youthful, radiant skin.",
+      description: "Advanced facial treatments designed to reduce signs of aging and promote youthful",
       image: antiAgingImage,
       duration: "60-90 mins",
       features: ["Collagen Boost", "Wrinkle Reduction", "Skin Tightening", "Hydration Therapy"],
@@ -39,7 +39,7 @@ const Services = () => {
       title: "Full Body Massage",
       description: "Relaxing and therapeutic full body massage to relieve tension and promote overall wellness.",
       image: massageImage,
-      duration: "60-120 mins",
+      duration: "60-90 mins",
       features: ["Deep Tissue", "Swedish Massage", "Hot Stone", "Aromatherapy"],
       icon: <Leaf className="w-6 h-6" />
     },
@@ -57,10 +57,13 @@ const Services = () => {
     <section id="services" ref={sectionRef} className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold font-playfair mb-6 scroll-animate">
+          <h1 className='text-s font-bold font-barlow text-primary uppercase mb-3 scroll-animate'>
             Our Services
+          </h1>
+          <h2 className="text-4xl md:text-5xl font-playfair mb-6 scroll-animate">
+            From Full Body Massage to Anti-Aging
           </h2>
-          <p className="text-lg text-muted-foreground font-lato max-w-3xl mx-auto scroll-animate">
+          <p className="text-lg text-foreground font-lato max-w-3xl mx-auto scroll-animate">
             Discover our comprehensive range of beauty and wellness services, each designed to enhance 
             your natural beauty and promote relaxation and rejuvenation.
           </p>
@@ -117,11 +120,11 @@ const Services = () => {
           <h3 className="text-2xl font-bold font-playfair mb-4">
             Ready to Experience Our Services?
           </h3>
-          <p className="text-muted-foreground font-lato mb-8">
+          <p className="text-foreground font-lato mb-8">
             Contact us today to schedule your appointment and begin your journey to beauty and wellness.
           </p>
           <Button 
-            className="btn-luxury text-lg px-8 py-4"
+            className="btn-luxury px-10 py-8 text-lg"
             onClick={() => window.open('https://wa.link/wg0gmt', '_blank')}
           >
             Contact Us on WhatsApp

@@ -25,11 +25,14 @@ const Location = () => {
   }, []);
 
   return (
-    <section id="location" ref={sectionRef} className="py-20">
+    <section id="location" ref={sectionRef} className="py-20 bg-card">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 scroll-animate">
-            Visit Our Salon
+          <h1 className='text-s font-bold font-barlow text-primary uppercase mb-3 scroll-animate'>
+            Visit Us
+          </h1>
+          <h2 className="text-4xl md:text-5xl font-playfair mb-6 scroll-animate">
+            We are in the Heart of Johor
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto scroll-animate">
             Conveniently located in Johor Bahru, Malaysia, Issime Beauty Salon is easily accessible 
@@ -37,27 +40,27 @@ const Location = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
+        <div className="grid grid-cols-2 gap-8 mb-16">
           {/* Salon Images */}
           <div className="scroll-animate">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-4">
+            <div className="flex flex-col gap-4">
+              <div className="flex md:flex-row flex-col pt-8 md:space-y-4 space-x-4">
                 <img
                   src={salonExterior}
                   alt="Issime Beauty Salon exterior - Beauty Salon in Malaysia"
-                  className="w-full h-48 object-cover rounded-xl"
+                  className="w-full h-48 object-cover rounded-none"
                 />
                 <img
                   src={salonExterior}
-                  alt="Issime Beauty Salon entrance"
-                  className="w-full h-32 object-cover rounded-xl"
+                  alt="Issime Beauty Salon exterior - Beauty Salon in Malaysia"
+                  className="w-full h-48 object-cover rounded-none"
                 />
               </div>
-              <div className="pt-8">
+              <div>
                 <img
                   src={salonExterior}
                   alt="Issime Beauty Salon storefront"
-                  className="w-full h-64 object-cover rounded-xl"
+                  className="w-full h-96 object-cover rounded-none"
                 />
               </div>
             </div>
@@ -120,7 +123,7 @@ const Location = () => {
 
               <div className="mt-8 space-y-4">
                 <Button 
-                  className="w-full btn-luxury"
+                  className="w-full"
                   onClick={() => window.open('https://wa.link/wg0gmt', '_blank')}
                 >
                   Book Appointment via WhatsApp
@@ -140,7 +143,7 @@ const Location = () => {
         {/* Google Maps */}
         <div className="scroll-animate">
           <div className="bg-card rounded-2xl p-6 shadow-lg">
-            <h3 className="text-2xl font-bold mb-6 text-center">Find Us on the Map</h3>
+            <h3 className="text-2xl font-bold mb-6 text-center">Find us on the Map</h3>
             <div className="relative h-96 rounded-xl overflow-hidden">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.434821739867!2d103.7312!3d1.4655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da7266d1b4b6d1%3A0x8b8b8b8b8b8b8b8b!2sJalan%20Mutiara%20Emas%2010%2C%20Taman%20Mount%20Austin%2C%2081100%20Johor%20Bahru%2C%20Johor%2C%20Malaysia!5e0!3m2!1sen!2smy!4v1635123456789!5m2!1sen!2smy"

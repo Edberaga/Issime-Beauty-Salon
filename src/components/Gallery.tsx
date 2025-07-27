@@ -66,8 +66,11 @@ const Gallery = () => {
     <section id="gallery" ref={sectionRef} className="py-20 bg-card">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 scroll-animate">
+          <h1 className='text-s font-bold font-barlow text-primary uppercase mb-3 scroll-animate'>
             Gallery
+          </h1>
+          <h2 className="text-4xl md:text-5xl font-playfair mb-6 scroll-animate">
+             Real Treatment Experiences
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto scroll-animate">
             Take a visual tour of our beautiful salon space, treatment rooms, and the serene 

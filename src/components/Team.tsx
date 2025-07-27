@@ -30,7 +30,7 @@ const Team = () => {
       speciality: "Anti-Aging Treatments",
       experience: "8+ years",
       image: teamMember,
-      description: "Sarah specializes in advanced anti-aging treatments and has helped hundreds of clients achieve youthful, radiant skin.",
+      description: "Sarah specializes in advanced anti-aging treatments and has helped hundreds of clients.",
       certifications: ["Certified Aesthetician", "Anti-Aging Specialist", "Holistic Therapy Expert"]
     },
     {
@@ -57,8 +57,11 @@ const Team = () => {
     <section id="team" ref={sectionRef} className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 scroll-animate">
-            Our Expert Team
+          <h1 className='text-s font-bold font-barlow text-primary uppercase mb-3 scroll-animate'>
+            Our Team
+          </h1>
+          <h2 className="text-4xl md:text-5xl font-playfair mb-6 scroll-animate">
+            Meet Our Experts
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto scroll-animate">
             Meet our dedicated team of certified professionals who are passionate about helping you 
@@ -114,13 +117,13 @@ const Team = () => {
           ))}
         </div>
 
-        <div className="bg-muted/50 rounded-2xl p-8 md:p-12 text-center scroll-animate">
+        <div className="bg-card rounded-2xl p-8 md:p-12 text-center scroll-animate">
           <div className="flex justify-center mb-6">
             <div className="bg-primary/10 w-20 h-20 rounded-full flex items-center justify-center">
               <Heart className="w-10 h-10 text-primary" />
             </div>
           </div>
-          <h3 className="text-3xl font-bold mb-6">
+          <h3 className="text-3xl font-bold font-playfair mb-6">
             Why Choose Our Team?
           </h3>
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
