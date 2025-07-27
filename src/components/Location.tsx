@@ -32,7 +32,7 @@ const Location = () => {
             Visit Us
           </h1>
           <h2 className="text-4xl md:text-5xl font-playfair mb-6 scroll-animate">
-            We are in the Heart of Johor
+            We are In the Heart of Johor
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto scroll-animate">
             Conveniently located in Johor Bahru, Malaysia, Issime Beauty Salon is easily accessible 
@@ -40,11 +40,11 @@ const Location = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-8 mb-16">
+        <div className="flex lg:flex-row flex-col w-auto gap-8 mb-16">
           {/* Salon Images */}
-          <div className="scroll-animate">
+          <div className="w-full scroll-animate">
             <div className="flex flex-col gap-4">
-              <div className="flex md:flex-row flex-col pt-8 md:space-y-4 space-x-4">
+              <div className="flex md:flex-row flex-col pt-8 lg:space-x-4 space-x-0 lg:space-y-0 space-y-4">
                 <img
                   src={salonExterior}
                   alt="Issime Beauty Salon exterior - Beauty Salon in Malaysia"
@@ -67,7 +67,7 @@ const Location = () => {
           </div>
 
           {/* Contact Information */}
-          <div className="scroll-animate">
+          <div className="w-full scroll-animate">
             <div className="bg-card rounded-2xl p-8 shadow-lg">
               <h3 className="text-3xl font-bold mb-8">Contact Information</h3>
               
@@ -95,7 +95,6 @@ const Location = () => {
                     <div className="text-muted-foreground space-y-1">
                       <p>Monday - Saturday: 9:00 AM - 8:00 PM</p>
                       <p>Sunday: 10:00 AM - 6:00 PM</p>
-                      <p className="text-sm text-primary">*Appointments recommended</p>
                     </div>
                   </div>
                 </div>
