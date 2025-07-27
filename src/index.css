@@ -12,6 +12,7 @@
     
     --card: 0 0% 100%;
     --card-foreground: 27 30% 20%;
+    --card-oposite: 0 0% 0%;
     
     --popover: 0 0% 100%;
     --popover-foreground: 27 30% 20%;
@@ -49,10 +50,11 @@
     --background: 27 35% 15%; /* #35271a */
     --foreground: 27 20% 85%;
     
-    --card: 27 30% 18%;
+    --card: 0 0% 0%;
     --card-foreground: 27 20% 85%;
+    --card-oposite: 0 0% 100%;
     
-    --popover: 27 30% 18%;
+    --popover: 0 0% 0%;
     --popover-foreground: 27 20% 85%;
     
     --primary: 27 25% 45%; /* #755944 */
@@ -134,17 +136,17 @@
   
   /* Luxury Button Styles */
   .btn-luxury {
-    @apply bg-primary text-primary-foreground px-8 py-3 rounded-full font-semibold font-quicksand transition-all duration-300 hover:scale-105 hover:shadow-lg;
+    @apply bg-primary text-primary-foreground px-8 py-5 rounded-full uppercase font-barlow text-xs tracking-wider transition-all duration-300 hover:scale-105 hover:shadow-lg;
   }
   
   /* WhatsApp Button */
   .whatsapp-btn {
     @apply fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 hover:scale-110 z-50;
-  }mary
+  }
   
   /* Scroll to Top Button */
   .scroll-top-btn {
-    @apply fixed bottom-24 right-6 bg-primary text-primary-foreground p-3 rounded-full shadow-lg hover:bg-accent transition-all duration-300 hover:scale-110 z-40 opacity-0 pointer-events-none;
+    @apply fixed bottom-24 right-6 bg-card_oposite text-card p-3 rounded-full shadow-lg hover:bg-accent transition-all duration-300 hover:scale-110 z-40 opacity-0 pointer-events-none;
   }
   
   .scroll-top-btn.visible {
