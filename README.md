@@ -40,7 +40,9 @@ A professional and elegant landing page website for Beauty Salon. Designed for s
 Install the Required Package:
     ```bash
     npm install
-    ```Run the program:
+    ```
+Run the program:
+
     ```bash
     npm run dev
     ```
