@@ -1,4 +1,4 @@
-import { MessageCircle } from 'lucide-react';
+import { FaWhatsapp } from "react-icons/fa";
 
 const WhatsAppButton = () => {
   return (
@@ -9,7 +9,7 @@ const WhatsAppButton = () => {
       className="whatsapp-btn"
       aria-label="Contact Issime Beauty Salon via WhatsApp"
     >
-      <MessageCircle className="w-6 h-6" />
+      <FaWhatsapp className="w-6 h-6" />
     </a>
   );
 };
