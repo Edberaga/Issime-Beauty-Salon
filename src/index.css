@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Issime Beauty Salon Design System - All colors MUST be HSL */
+
+@layer base {
+  :root {
+    /* Light Mode - Warm Beige Theme */
+    --background: 27 20% 76%; /* #c0a692 */
+    --foreground: 27 30% 20%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 27 30% 20%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 27 30% 20%;
+    
+    --primary: 27 25% 52%; /* #a47e62 */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 27 30% 85%;
+    --secondary-foreground: 27 30% 20%;
+    
+    --muted: 27 15% 88%;
+    --muted-foreground: 27 20% 45%;
+    
+    --accent: 27 25% 52%; /* #a47e62 */
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 27 20% 85%;
+    --input: 27 20% 88%;
+    --ring: 27 25% 52%;
+    
+    --radius: 0.75rem;
+    
+    /* Beauty Salon Specific Colors */
+    --luxury-gold: 45 90% 70%;
+    --warm-brown: 27 35% 30%;
+    --soft-cream: 27 40% 95%;
+    --elegant-shadow: 27 20% 20%;
+  }
+
+  .dark {
+    /* Dark Mode - Rich Brown Theme */
+    --background: 27 35% 15%; /* #35271a */
+    --foreground: 27 20% 85%;
+    
+    --card: 27 30% 18%;
+    --card-foreground: 27 20% 85%;
+    
+    --popover: 27 30% 18%;
+    --popover-foreground: 27 20% 85%;
+    
+    --primary: 27 25% 45%; /* #755944 */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 27 20% 25%;
+    --secondary-foreground: 27 20% 85%;
+    
+    --muted: 27 15% 22%;
+    --muted-foreground: 27 15% 65%;
+    
+    --accent: 27 25% 45%; /* #755944 */
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 27 20% 25%;
+    --input: 27 20% 22%;
+    --ring: 27 25% 45%;
+    
+    /* Beauty Salon Specific Colors - Dark Mode */
+    --luxury-gold: 45 80% 60%;
+    --warm-brown: 27 40% 70%;
+    --soft-cream: 27 20% 20%;
+    --elegant-shadow: 0 0% 0%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-lato transition-colors duration-300;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Beauty Salon Animations */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  
+  .animate-slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  
+  .animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  
+  /* Scroll Animations */
+  .scroll-animate {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+  }
+  
+  .scroll-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Luxury Button Styles */
+  .btn-luxury {
+    @apply bg-primary text-primary-foreground px-8 py-3 rounded-full font-semibold font-quicksand transition-all duration-300 hover:scale-105 hover:shadow-lg;
+  }
+  
+  /* WhatsApp Button */
+  .whatsapp-btn {
+    @apply fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 hover:scale-110 z-50;
+  }mary
+  
+  /* Scroll to Top Button */
+  .scroll-top-btn {
+    @apply fixed bottom-24 right-6 bg-primary text-primary-foreground p-3 rounded-full shadow-lg hover:bg-accent transition-all duration-300 hover:scale-110 z-40 opacity-0 pointer-events-none;
+  }
+  
+  .scroll-top-btn.visible {
+    @apply opacity-100 pointer-events-auto;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

@@ -1,4 +1,4 @@
-# Issime Beauty Salon 🌿💆‍♀️
+# Beauty Salon 🌿💆‍♀️
 
 A professional and elegant landing page website for Beauty Salon. Designed for single page next.js, highlight luxury spa treatments, holistic beauty services, and anti-aging skincare. Built with user experience in mind, this site provides a soothing interface to attract and engage customers looking for premium beauty solutions.
 
@@ -41,11 +41,6 @@ Install the Required Package:
     ```bash
     npm install
     ```
-    Run the program:
-    
-    ```bash
-    npm run dev
-    ```
 
 3. **Customize for Your Salon**
 - Edit Hero.tsx, About.tsx, etc., with your real content
@@ -53,3 +48,11 @@ Install the Required Package:
 - Update Google Maps iframe with your real location
 - Replace contact info in the footer and contact section
 - For your SEO edit the title, description, and keyword at the pages/index.tsx
+
+4. **Change the Web Colours**
+Website support 2 mode of colours which is light and dark mode. To change it:
+- Go to index.css
+- Class name .root CSS colors for the light mode.
+- Class name .dark CSS colors for the dark mode.
+
+5. **Host at Firebase/Vercel**
