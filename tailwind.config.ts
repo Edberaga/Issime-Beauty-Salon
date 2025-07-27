@@ -21,7 +21,7 @@ export default {
 			fontFamily: {
 				'playfair': ['Playfair Display', 'serif'],
 				'lato': ['Lato', 'sans-serif'],
-				'quicksand': ['Quicksand', 'sans-serif'],
+				'barlow': ['Barlow', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -56,6 +56,10 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
+				},
+				card_oposite: {
+					DEFAULT: 'hsl(var(--card-oposite))',
+					foreground: 'hsl(var(--card))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
