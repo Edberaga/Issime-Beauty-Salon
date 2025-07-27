@@ -2,6 +2,7 @@ import { MapPin, Phone, Mail, Clock, Heart } from 'lucide-react';
 import issimeLogo from '@/assets/issime-logo.png';
 
 const Footer = () => {
+  const curYear = new Date().getFullYear();
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -12,24 +13,24 @@ const Footer = () => {
   return (
     <footer className="bg-muted/30 border-t border-border">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid lg:grid-cols-4 gap-8">
+        <div className="flex item-center justify-center text-center gap-8">
           {/* Logo and Description */}
-          <div className="lg:col-span-1">
+          <div className="">
             <img 
               src={issimeLogo} 
               alt="Issime Beauty Salon" 
-              className="h-16 w-auto mb-6"
+              className="h-16 w-auto mb-3 m-auto"
             />
-            <p className="text-muted-foreground mb-6">
+            <p className="text-muted-foreground mb-3">
               Your premier destination for holistic natural therapy and luxury beauty treatments in Johor Bahru, Malaysia.
             </p>
-            <div className="flex items-center text-sm text-muted-foreground">
+            <div className="flex justify-center item-center text-sm font-barlow text-muted-foreground">
               <Heart className="w-4 h-4 mr-2 text-primary" />
               <span>Serving clients with love since 2019</span>
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Quick Links 
           <div>
             <h3 className="font-semibold text-lg mb-6">Quick Links</h3>
             <nav className="space-y-3">
@@ -53,7 +54,7 @@ const Footer = () => {
             </nav>
           </div>
 
-          {/* Services */}
+          {/* Services
           <div>
             <h3 className="font-semibold text-lg mb-6">Our Services</h3>
             <ul className="space-y-3 text-muted-foreground">
@@ -66,7 +67,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Contact Info 
           <div>
             <h3 className="font-semibold text-lg mb-6">Contact Us</h3>
             <div className="space-y-4 text-muted-foreground">
@@ -97,15 +98,13 @@ const Footer = () => {
               </div>
             </div>
           </div>
+          */}
         </div>
 
         <div className="border-t border-border mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex flex-col md:flex-row justify-center items-center">
             <p className="text-muted-foreground text-sm">
-              © 2024 Issime Beauty Salon. All rights reserved.
-            </p>
-            <p className="text-muted-foreground text-sm mt-4 md:mt-0">
-              Beauty Salon in Malaysia | Anti aging treatments | Full Body Massage | Youthful Skin with Natural Face Cleansing
+              Copyright © {curYear} Issime Beauty Salon. All rights reserved | Powered by <b>Trendify Media</b>
             </p>
           </div>
         </div>
