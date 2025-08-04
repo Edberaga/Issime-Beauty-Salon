@@ -46,7 +46,7 @@ const Header = () => {
           <div className="flex items-center">
             <img 
               src={issimeLogo} 
-              alt="Issime Beauty Salon - Beauty Salon in Malaysia offering Anti aging treatments and Full Body Massage" 
+              alt="Issime Beauty Salon" 
               className="h-12 w-auto"
             />
           </div>
