@@ -85,7 +85,7 @@ const Hero = () => {
                     {slide.description}
                   </p>
                   <Button
-                    onClick={() => scrollToSection('about')}
+                  onClick={() => window.open('https://wa.link/wg0gmt', '_blank')}
                     className="btn-luxury animate-fade-in-up"
                   >
                     Make Appointment
