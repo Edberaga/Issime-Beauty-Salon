@@ -148,7 +148,7 @@ const Gallery = () => {
             className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedImage(null)}
           >
-            <div className="relative max-w-4xl max-h-full">
+            <div className="relative max-w-2xl max-h-full">
               <button
                 onClick={() => setSelectedImage(null)}
                 className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors"
@@ -158,7 +158,7 @@ const Gallery = () => {
               <img
                 src={galleryImages[selectedImage].src}
                 alt={galleryImages[selectedImage].alt}
-                className="max-w-full max-h-full object-contain rounded-lg"
+                className="object-contain rounded-lg"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-4 rounded-b-lg">
                 <h3 className="text-lg font-semibold">{galleryImages[selectedImage].title}</h3>
