@@ -155,7 +155,7 @@ const Products = () => {
             </div>
           </div>
           <Button 
-            className="btn-luxury px-10 py-8 text-lg"
+            className="btn-luxury lg:px-10 px-6 lg:py-8 py-4 lg:text-lg"
             onClick={() => window.open('https://wa.link/wg0gmt', '_blank')}
           >
             Contact Us for Product Information
