@@ -1,7 +1,9 @@
 import { useEffect, useRef } from 'react';
 import { MapPin, Clock, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import salonExterior from '@/assets/salon-exterior.jpg';
+import img1 from '@/assets/image_1.png';
+import img2 from '@/assets/image_2.png';
+import salonExterior from '@/assets/issime_beauty_salon.png';
 
 const Location = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -44,16 +46,16 @@ const Location = () => {
           {/* Salon Images */}
           <div className="w-full scroll-animate">
             <div className="flex flex-col gap-4">
-              <div className="flex md:flex-row flex-col pt-8 lg:space-x-4 space-x-0 lg:space-y-0 space-y-4">
+              <div className="flex md:flex-row flex-col pt-8 gap-4">
                 <img
-                  src={salonExterior}
+                  src={img1}
                   alt="Issime Beauty Salon exterior - Beauty Salon in Malaysia"
-                  className="w-full h-48 object-cover rounded-none"
+                  className="lg:w-[49%] w-full h-48 object-cover rounded-none"
                 />
                 <img
-                  src={salonExterior}
+                  src={img2}
                   alt="Issime Beauty Salon exterior - Beauty Salon in Malaysia"
-                  className="w-full h-48 object-cover rounded-none"
+                  className="lg:w-[49%] w-full h-48 object-cover rounded-none"
                 />
               </div>
               <div>

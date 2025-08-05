@@ -1,9 +1,9 @@
 import { useEffect, useRef } from 'react';
 import { Clock, Star, Leaf, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import antiAgingImage from '@/assets/anti-aging.jpg';
-import massageImage from '@/assets/massage.jpg';
-import spaImage from '@/assets/spa-treatment.jpg';
+import antiAgingImage from '@/assets/anti_aging.jpeg';
+import massageImage from '@/assets/full_body_message.jpeg';
+import spaImage from '@/assets/face_cleansing.webp';
 
 const Services = () => {
   const sectionRef = useRef<HTMLElement>(null);
