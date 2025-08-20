@@ -14,7 +14,6 @@ import { Button } from './ui/button';
 
 const Gallery = () => {
   const sectionRef = useRef<HTMLElement>(null);
-  const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -114,7 +113,7 @@ const Gallery = () => {
             <div
               key={index}
               className="scroll-animate cursor-pointer group relative overflow-hidden rounded-xl"
-              onClick={() => setSelectedImage(index)}
+              onClick={() => window.open(image.url)}
             >
               <div className="relative">
                 <img
@@ -141,31 +140,6 @@ const Gallery = () => {
             </div>
           ))}
         </div>
-
-        {/* Lightbox Modal */}
-        {selectedImage !== null && (
-          <div 
-            className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
-            onClick={() => setSelectedImage(null)}
-          >
-            <div className="relative max-w-2xl max-h-full">
-              <button
-                onClick={() => setSelectedImage(null)}
-                className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors"
-              >
-                <X className="w-8 h-8" />
-              </button>
-              <img
-                src={galleryImages[selectedImage].src}
-                alt={galleryImages[selectedImage].alt}
-                className="object-contain rounded-lg"
-              />
-              <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-4 rounded-b-lg">
-                <h3 className="text-lg font-semibold">{galleryImages[selectedImage].title}</h3>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </section>
   );
