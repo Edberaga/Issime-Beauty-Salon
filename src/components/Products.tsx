@@ -78,7 +78,7 @@ const Products = () => {
         <div className="grid lg:grid-cols-2 xl:grid-cols-4 gap-8 mb-16">
           {products.map((product, index) => (
             <div key={index} className="scroll-animate">
-              <div className="bg-background rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group ">
+              <div className="bg-background rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group h-full flex flex-col">
                 <div className="relative h-48 overflow-hidden">
                   <img
                     src={product.image}
@@ -94,13 +94,13 @@ const Products = () => {
                   </div>
                 </div>
                 
-                <div className="p-6 flex flex-col h-full">
+                <div className="p-6 flex flex-col flex-1">
                   <h3 className="text-xl font-bold mb-3">{product.name}</h3>
-                  <p className="text-muted-foreground mb-4 flex-grow">
+                  <p className="text-muted-foreground mb-4 flex-1">
                     {product.description}
                   </p>
                   
-                  <div className="space-y-2 mb-6">
+                  <div className="space-y-2 mb-6 flex-1">
                     {product.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center text-sm">
                         <div className="w-2 h-2 bg-primary rounded-full mr-2" />
@@ -110,7 +110,7 @@ const Products = () => {
                   </div>
                   
                   <Button 
-                    className="w-full btn-luxury mt-auto"
+                    className="w-full btn-luxury"
                     onClick={() => window.open('https://wa.link/wg0gmt', '_blank')}
                   >
                     Inquire Now
@@ -158,7 +158,7 @@ const Products = () => {
             className="btn-luxury lg:px-10 px-6 lg:py-8 py-4 lg:text-lg"
             onClick={() => window.open('https://wa.link/wg0gmt', '_blank')}
           >
-            Contact Us for Product Information
+            More Product Info
           </Button>
         </div>
       </div>

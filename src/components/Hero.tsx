@@ -74,14 +74,14 @@ const Hero = () => {
               
               {/* Content */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center text-white max-w-4xl px-4">
+                <div className="text-center text-white max-w-4xl px-4 md:px-8">
                   <p className="text-lg md:text-xl font-light font-lato mb-4 animate-fade-in-up">
                     {slide.subtitle}
                   </p>
-                  <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-playfair mb-6 leading-tight animate-fade-in-up">
+                  <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold font-playfair mb-6 leading-tight animate-fade-in-up">
                     {slide.title}
                   </h1>
-                  <p className="text-lg md:text-xl font-lato mb-8 max-w-2xl mx-auto animate-fade-in-up">
+                  <p className="text-base md:text-lg lg:text-xl font-lato mb-8 max-w-2xl mx-auto animate-fade-in-up">
                     {slide.description}
                   </p>
                   <Button
