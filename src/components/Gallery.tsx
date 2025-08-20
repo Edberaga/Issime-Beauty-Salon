@@ -112,27 +112,27 @@ const Gallery = () => {
           {galleryImages.map((image, index) => (
             <div
               key={index}
-              className="scroll-animate cursor-pointer group relative overflow-hidden rounded-xl"
+              className="scroll-animate cursor-pointer group relative overflow-hidden rounded-xl aspect-square"
               onClick={() => window.open(image.url)}
             >
               <div className="relative">
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 aspect-square"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors duration-300" />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="text-white text-center px-5">
-                    <h3 className="py-2 text-lg font-semibold">{image.title}</h3>
-                    <p className="text-sm text-justify">{image.desc}</p>
+                  <div className="text-white text-center px-2 md:px-5">
+                    <h3 className="py-1 md:py-2 text-sm md:text-lg font-semibold line-clamp-2">{image.title}</h3>
+                    <p className="text-xs md:text-sm text-justify line-clamp-3 md:line-clamp-none hidden md:block">{image.desc}</p>
                     <Button
                       variant='outline'
                       size='icon'
-                      className='w-10 h-10 my-2 rounded-full'
+                      className='w-8 h-8 md:w-10 md:h-10 my-1 md:my-2 rounded-full'
                       onClick={() => window.open(image.url)}
                     >
-                      <FaRegCirclePlay className="h-5 w-5" />
+                      <FaRegCirclePlay className="h-3 w-3 md:h-5 md:w-5" />
                     </Button>
                   </div>
                 </div>

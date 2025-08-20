@@ -72,7 +72,7 @@ const Team = () => {
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {teamMembers.map((member, index) => (
             <div key={index} className="scroll-animate">
-              <div className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <div className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group h-full flex flex-col">
                 <div className="relative h-80 overflow-hidden">
                   <img
                     src={member.image}
@@ -88,7 +88,7 @@ const Team = () => {
                   </div>
                 </div>
                 
-                <div className="p-6">
+                <div className="p-6 flex-1 flex flex-col">
                   <h3 className="text-2xl font-bold mb-2">{member.name}</h3>
                   <p className="text-primary font-semibold mb-2">{member.position}</p>
                   <p className="text-sm text-muted-foreground mb-4">
@@ -99,7 +99,7 @@ const Team = () => {
                     {member.description}
                   </p>
                   
-                  <div className="space-y-2">
+                  <div className="space-y-2 mt-auto">
                     <h4 className="font-semibold flex items-center">
                       <Award className="w-4 h-4 text-primary mr-2" />
                       Certifications

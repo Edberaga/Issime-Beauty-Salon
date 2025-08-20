@@ -72,7 +72,7 @@ const Services = () => {
         <div className="grid lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div key={index} className="scroll-animate">
-              <div className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <div className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group h-full flex flex-col">
                 <div className="relative h-64 overflow-hidden">
                   <img
                     src={service.image}
@@ -85,7 +85,7 @@ const Services = () => {
                   </div>
                 </div>
                 
-                <div className="p-6">
+                <div className="p-6 flex-1 flex flex-col">
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-2xl font-bold font-playfair">{service.title}</h3>
                     <div className="flex items-center text-sm text-muted-foreground">
@@ -98,7 +98,7 @@ const Services = () => {
                     {service.description}
                   </p>
                   
-                  <div className="space-y-2 mb-6">
+                  <div className="space-y-2 mb-6 flex-1">
                     {service.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center text-sm">
                         <Star className="w-4 h-4 text-primary mr-2" />
@@ -107,7 +107,7 @@ const Services = () => {
                     ))}
                   </div>
                   
-                  <Button className="w-full btn-luxury">
+                  <Button className="w-full btn-luxury mt-auto">
                     Book Now
                   </Button>
                 </div>
