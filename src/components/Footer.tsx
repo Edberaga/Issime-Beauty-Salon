@@ -1,5 +1,5 @@
 import { MapPin, Phone, Mail, Clock, Heart } from 'lucide-react';
-import issimeLogo from '@/assets/issime-logo.png';
+import issimeLogo from '@/assets/issime-logo.jpg';
 
 const Footer = () => {
   const curYear = new Date().getFullYear();

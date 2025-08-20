@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Moon, Sun, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import issimeLogo from '@/assets/issime-logo.png';
+import issimeLogo from '@/assets/issime-logo.jpg';
 
 const Header = () => {
   const [isDark, setIsDark] = useState(false);
@@ -39,7 +39,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-[9997] bg-card/90 backdrop-blur-md border-b border-border transition-all duration-300">
+    <header className="fixed top-0 left-0 right-0 z-[9997] bg-card backdrop-blur-md border-b border-border transition-all duration-300">
       <div className="container mx-auto">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
