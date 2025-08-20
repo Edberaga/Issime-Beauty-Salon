@@ -141,16 +141,31 @@
   
   /* WhatsApp Button */
   .whatsapp-btn {
-    @apply fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 hover:scale-110 z-50;
+    @apply fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 hover:scale-110 z-[9999];
   }
   
   /* Scroll to Top Button */
   .scroll-top-btn {
-    @apply fixed bottom-24 right-6 bg-card_oposite text-card p-3 rounded-full shadow-lg hover:bg-accent transition-all duration-300 hover:scale-110 z-40 opacity-0 pointer-events-none;
+    @apply fixed bottom-24 right-6 bg-primary text-primary-foreground p-3 rounded-full shadow-lg hover:bg-accent transition-all duration-300 hover:scale-110 z-[9998] opacity-0 pointer-events-none;
   }
   
   .scroll-top-btn.visible {
     @apply opacity-100 pointer-events-auto;
+  }
+  
+  /* Mobile specific fixes */
+  @media (max-width: 768px) {
+    .whatsapp-btn {
+      @apply bottom-4 right-4 p-3 text-sm;
+    }
+    
+    .scroll-top-btn {
+      @apply bottom-20 right-4 p-2;
+    }
+    
+    .scroll-top-btn svg {
+      @apply w-4 h-4;
+    }
   }
 }
 
