@@ -1,0 +1,84 @@
+diff --git a/src/index.css b/src/index.css
+index 1234567..abcdefg 100644
+--- a/src/index.css
++++ b/src/index.css
+@@ -150,19 +150,19 @@
+   
+   /* WhatsApp Button */
+   .whatsapp-btn {
+-    @apply fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 hover:scale-110 z-[9999];
++    @apply fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 hover:scale-110 z-[9999] flex items-center justify-center;
+   }
+   
+   /* Scroll to Top Button */
+   .scroll-top-btn {
+-    @apply fixed bottom-24 right-6 bg-primary text-primary-foreground p-3 rounded-full shadow-lg hover:bg-accent transition-all duration-300 hover:scale-110 z-[9998] opacity-0 pointer-events-none;
++    @apply fixed bottom-24 right-6 bg-primary text-primary-foreground p-3 rounded-full shadow-lg hover:bg-primary/90 transition-all duration-300 hover:scale-110 z-[9998] opacity-0 pointer-events-none flex items-center justify-center;
+   }
+   
+   .scroll-top-btn.visible {
+     @apply opacity-100 pointer-events-auto;
+   }
+   
+-  /* Mobile specific fixes */
++  /* Mobile specific styles */
+   @media (max-width: 768px) {
+     .whatsapp-btn {
+       @apply bottom-4 right-4 p-3 text-sm;
+@@ -171,10 +171,6 @@
+     .scroll-top-btn {
+       @apply bottom-20 right-4 p-2;
+     }
+-    
+-    .scroll-top-btn svg {
+-      @apply w-4 h-4;
+-    }
+   }
+ }
+ 
+diff --git a/src/components/WhatsAppButton.tsx b/src/components/WhatsAppButton.tsx
+index 1234567..abcdefg 100644
+--- a/src/components/WhatsAppButton.tsx
++++ b/src/components/WhatsAppButton.tsx
+@@ -3,16 +3,16 @@ import { FaWhatsapp } from "react-icons/fa";
+ const WhatsAppButton = () => {
+   return (
+-    <div className="fixed bottom-6 right-6 z-[9999]">
++    <div className="fixed bottom-6 right-6 z-[9999] md:bottom-6 md:right-6 bottom-4 right-4">
+       <a
+         href="https://wa.link/wg0gmt"
+         target="_blank"
+         rel="noopener noreferrer"
+-        className="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 hover:scale-110 flex items-center justify-center md:p-4 p-3"
++        className="bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 hover:scale-110 flex items-center justify-center p-4 md:p-4 sm:p-3"
+         aria-label="Contact Issime Beauty Salon via WhatsApp"
+       >
+-        <FaWhatsapp className="w-6 h-6 md:w-6 md:h-6 w-5 h-5" />
++        <FaWhatsapp className="w-6 h-6 md:w-6 md:h-6 sm:w-5 sm:h-5" />
+       </a>
+     </div>
+   );
+ };
+
+diff --git a/src/components/ScrollToTop.tsx b/src/components/ScrollToTop.tsx
+index 1234567..abcdefg 100644
+--- a/src/components/ScrollToTop.tsx
++++ b/src/components/ScrollToTop.tsx
+@@ -25,16 +25,16 @@ const ScrollToTop = () => {
+ 
+   return (
+-    <div className="fixed bottom-24 right-6 z-[9998]">
++    <div className="fixed bottom-24 right-6 z-[9998] md:bottom-24 md:right-6 bottom-20 right-4">
+       <button
+         onClick={scrollToTop}
+-        className={`bg-primary text-primary-foreground p-3 rounded-full shadow-lg hover:bg-accent transition-all duration-300 hover:scale-110 flex items-center justify-center md:p-3 p-2 ${
++        className={`bg-primary text-primary-foreground rounded-full shadow-lg hover:bg-primary/90 transition-all duration-300 hover:scale-110 flex items-center justify-center p-3 md:p-3 sm:p-2 ${
+           isVisible ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+         }`}
+         aria-label="Scroll to top"
+       >
+-        <ChevronUp className="w-5 h-5 md:w-5 md:h-5 w-4 h-4" />
++        <ChevronUp className="w-5 h-5 md:w-5 md:h-5 sm:w-4 sm:h-4" />
+       </button>
+     </div>
+   );
