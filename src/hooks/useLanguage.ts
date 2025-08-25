@@ -1,28 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useAppSelector } from './useAppSelector';
 
 export type Language = 'en' | 'zh';
 
 export const useLanguage = () => {
-  const [language, setLanguage] = useState<Language>('en');
-
-  useEffect(() => {
-    // Get saved language or default to English
-    const savedLanguage = (localStorage.getItem('language') as Language) || 'en';
-    setLanguage(savedLanguage);
-
-    // Listen for language changes
-    const handleLanguageChange = (event: CustomEvent) => {
-      setLanguage(event.detail);
-    };
-
-    window.addEventListener('languageChange', handleLanguageChange as EventListener);
-
-    return () => {
-      window.removeEventListener('languageChange', handleLanguageChange as EventListener);
-    };
-  }, []);
-
-  return language;
+  const { currentLanguage } = useAppSelector((state) => state.language);
+  return currentLanguage;
 };
 
 export const translations = {

@@ -1,21 +1,25 @@
 import { useEffect, useState } from 'react';
 import { ChevronUp } from 'lucide-react';
+import { useAppSelector } from '@/hooks/useAppSelector';
+import { useAppDispatch } from '@/hooks/useAppDispatch';
+import { setScrollTopVisible } from '@/store/slices/uiSlice';
 
 const ScrollToTop = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const dispatch = useAppDispatch();
+  const { isScrollTopVisible } = useAppSelector((state) => state.ui);
 
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.pageYOffset > 300) {
-        setIsVisible(true);
+        dispatch(setScrollTopVisible(true));
       } else {
-        setIsVisible(false);
+        dispatch(setScrollTopVisible(false));
       }
     };
 
     window.addEventListener('scroll', toggleVisibility);
     return () => window.removeEventListener('scroll', toggleVisibility);
-  }, []);
+  }, [dispatch]);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -29,7 +33,7 @@ const ScrollToTop = () => {
       <button
         onClick={scrollToTop}
         className={`bg-primary text-primary-foreground p-3 rounded-full shadow-lg hover:bg-accent transition-all duration-300 hover:scale-110 flex items-center justify-center md:p-3 p-2 ${
-          isVisible ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+          isScrollTopVisible ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
         aria-label="Scroll to top"
       >
