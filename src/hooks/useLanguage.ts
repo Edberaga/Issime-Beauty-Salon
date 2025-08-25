@@ -104,6 +104,12 @@ export const translations = {
       description: "Your premier destination for holistic natural therapy and luxury beauty treatments in Johor Bahru, Malaysia.",
       servingClients: "Serving clients with love since 2019",
       copyright: "Copyright © 2025 Issime Beauty Salon. All rights reserved | Powered by"
+    },
+    // SEO
+    seo: {
+      title: "Issime Beauty Salon - Premium Beauty Salon in Malaysia | Anti Aging Treatments & Full Body Massage",
+      description: "Issime Beauty Salon in Johor Bahru, Malaysia offers premium anti aging treatments, full body massage, and youthful skin with natural face cleansing. Book your holistic natural therapy session today!",
+      keywords: "Issime Beauty Salon, Beauty Salon in Malaysia, Anti aging treatments, Full Body Massage, Youthful Skin with Natural Face Cleansing, Holistic Natural Therapy, Johor Bahru Spa, Beauty Treatments Malaysia"
     }
   },
   zh: {
@@ -184,6 +190,12 @@ export const translations = {
       description: "您在马来西亚新山进行整体自然疗法和奢华美容护理的首选目的地。",
       servingClients: "自2019年以来用爱为客户服务",
       copyright: "版权所有 © 2025 伊诗美美容院。保留所有权利 | 技术支持"
+    },
+    // SEO
+    seo: {
+      title: "伊诗美美容院 - 马来西亚顶级美容院 | 抗衰老护理和全身按摩",
+      description: "马来西亚新山伊诗美美容院提供顶级抗衰老护理、全身按摩和天然面部清洁，让肌肤焕发青春光彩。立即预约我们的整体自然疗法服务！",
+      keywords: "伊诗美美容院, 马来西亚美容院, 抗衰老护理, 全身按摩, 天然面部清洁, 整体自然疗法, 新山水疗, 马来西亚美容护理, 美容沙龙, 护肤治疗"
     }
   }
 };
