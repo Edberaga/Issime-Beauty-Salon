@@ -30,6 +30,8 @@ A professional and elegant landing page website for Beauty Salon. Designed for s
 
 ## 🛠 Setup & Usage
 
+### Local Development
+
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/yourusername/issime-beauty-salon.git
@@ -41,6 +43,46 @@ Install the Required Package:
     ```bash
     npm install
     ```
+
+3. **Run Development Server:**
+   ```bash
+   npm run dev
+   ```
+
+### Docker Deployment
+
+#### Production (Recommended)
+```bash
+# Build and run with Docker Compose
+npm run docker:prod
+
+# Or manually
+docker build -t issime-beauty-salon .
+docker run -p 3000:80 issime-beauty-salon
+```
+
+#### Development with Docker
+```bash
+# Run development environment in Docker
+npm run docker:dev
+```
+
+#### Docker Commands
+```bash
+# Build production image
+npm run docker:build
+
+# Run production container
+npm run docker:run
+
+# Stop all containers
+npm run docker:stop
+
+# Clean up Docker resources
+npm run docker:clean
+```
+
+### Manual Setup (Alternative)
 
 3. **Customize for Your Salon**
 - Edit Hero.tsx, About.tsx, etc., with your real content
@@ -55,4 +97,25 @@ Website support 2 mode of colours which is light and dark mode. To change it:
 - Class name .root CSS colors for the light mode.
 - Class name .dark CSS colors for the dark mode.
 
-5. **Host at Firebase/Vercel**
+5. **Deployment Options**
+- **Docker** (Recommended): Use the Docker setup above
+- **Firebase/Vercel**: Traditional hosting platforms
+- **Cloud Platforms**: AWS, Google Cloud, Azure with Docker support
+
+## 🐳 Docker Information
+
+### Production Setup
+- **Multi-stage build** for optimized image size
+- **Nginx** web server for production
+- **Gzip compression** enabled
+- **Security headers** configured
+- **Health checks** included
+
+### Development Setup
+- **Hot reload** support
+- **Volume mounting** for live code changes
+- **Development dependencies** included
+
+### Ports
+- **Production**: `http://localhost:3000`
+- **Development**: `http://localhost:8080`

@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  issime-beauty-salon-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
