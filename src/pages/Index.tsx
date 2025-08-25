@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useLanguage, translations } from '@/hooks/useLanguage';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
@@ -14,16 +15,17 @@ import FacebookButton from '@/components/buttons/FacebookButton';
 import InstagramButton from '@/components/buttons/InstagramButton';
 
 const Index = () => {
+  const language = useLanguage();
+  const t = translations[language];
+
   useEffect(() => {
-    // Set SEO metadata
-    document.title = "Issime Beauty Salon - Premium Beauty Salon in Malaysia | Anti Aging Treatments & Full Body Massage";
+    // Set SEO metadata based on current language
+    document.title = t.seo.title;
     
     // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 
-        'Issime Beauty Salon in Johor Bahru, Malaysia offers premium anti aging treatments, full body massage, and youthful skin with natural face cleansing. Book your holistic natural therapy session today!'
-      );
+      metaDescription.setAttribute('content', t.seo.description);
     }
 
     // Update meta keywords
@@ -33,9 +35,7 @@ const Index = () => {
       metaKeywords.setAttribute('name', 'keywords');
       document.head.appendChild(metaKeywords);
     }
-    metaKeywords.setAttribute('content', 
-      'Issime Beauty Salon, Beauty Salon in Malaysia, Anti aging treatments, Full Body Massage, Youthful Skin with Natural Face Cleansing, Holistic Natural Therapy, Johor Bahru Spa, Beauty Treatments Malaysia'
-    );
+    metaKeywords.setAttribute('content', t.seo.keywords);
 
     // Update meta author
     let metaAuthor = document.querySelector('meta[name="author"]');
@@ -49,16 +49,35 @@ const Index = () => {
     // Update Open Graph tags
     const ogTitle = document.querySelector('meta[property="og:title"]');
     if (ogTitle) {
-      ogTitle.setAttribute('content', 'Issime Beauty Salon - Premium Beauty Salon in Malaysia');
+      ogTitle.setAttribute('content', t.seo.title);
     }
 
     const ogDescription = document.querySelector('meta[property="og:description"]');
     if (ogDescription) {
-      ogDescription.setAttribute('content', 
-        'Experience luxury beauty treatments at Issime Beauty Salon in Johor Bahru. Specializing in anti-aging treatments, full body massage, and natural skincare.'
-      );
+      ogDescription.setAttribute('content', t.seo.description);
     }
-  }, []);
+
+    // Update HTML lang attribute for SEO
+    document.documentElement.setAttribute('lang', language);
+
+    // Add hreflang meta tags for multilingual SEO
+    const existingHreflang = document.querySelectorAll('link[hreflang]');
+    existingHreflang.forEach(link => link.remove());
+
+    // Add hreflang tags
+    const currentUrl = window.location.origin + window.location.pathname;
+    const addHreflang = (lang: string, url: string) => {
+      const link = document.createElement('link');
+      link.rel = 'alternate';
+      link.hreflang = lang;
+      link.href = url;
+      document.head.appendChild(link);
+    };
+
+    addHreflang('en', currentUrl);
+    addHreflang('zh', currentUrl);
+    addHreflang('x-default', currentUrl); // Default language
+  }, [language, t.seo]);
 
   return (
     <div className="min-h-screen">
