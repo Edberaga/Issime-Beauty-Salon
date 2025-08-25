@@ -1,17 +1,23 @@
 import { useState, useEffect } from 'react';
-import { Moon, Sun, Menu, X } from 'lucide-react';
+import { Moon, Sun, Menu, X, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import issimeLogo from '@/assets/issime-logo.jpg';
 
 const Header = () => {
   const [isDark, setIsDark] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [language, setLanguage] = useState('en');
 
   useEffect(() => {
     // Check system preference
     const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
     setIsDark(isDarkMode);
     document.documentElement.classList.toggle('dark', isDarkMode);
+    
+    // Check saved language preference
+    const savedLanguage = localStorage.getItem('language') || 'en';
+    setLanguage(savedLanguage);
+    document.documentElement.setAttribute('lang', savedLanguage);
   }, []);
 
   const toggleTheme = () => {
@@ -20,6 +26,14 @@ const Header = () => {
     document.documentElement.classList.toggle('dark', newTheme);
   };
 
+  const toggleLanguage = () => {
+    const newLanguage = language === 'en' ? 'zh' : 'en';
+    setLanguage(newLanguage);
+    localStorage.setItem('language', newLanguage);
+    document.documentElement.setAttribute('lang', newLanguage);
+    // Dispatch custom event for other components to listen
+    window.dispatchEvent(new CustomEvent('languageChange', { detail: newLanguage }));
+  };
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -29,13 +43,13 @@ const Header = () => {
   };
 
   const navItems = [
-    { name: 'Home', id: 'home' },
-    { name: 'About', id: 'about' },
-    { name: 'Services', id: 'services' },
-    { name: 'Gallery', id: 'gallery' },
-    { name: 'Team', id: 'team' },
-    { name: 'Products', id: 'products' },
-    { name: 'Location', id: 'location' },
+    { name: language === 'en' ? 'Home' : '首页', id: 'home' },
+    { name: language === 'en' ? 'About' : '关于我们', id: 'about' },
+    { name: language === 'en' ? 'Services' : '服务项目', id: 'services' },
+    { name: language === 'en' ? 'Gallery' : '画廊', id: 'gallery' },
+    // { name: language === 'en' ? 'Team' : '团队', id: 'team' },
+    // { name: language === 'en' ? 'Products' : '产品', id: 'products' },
+    { name: language === 'en' ? 'Location' : '位置', id: 'location' },
   ];
 
   return (
@@ -66,6 +80,16 @@ const Header = () => {
 
           {/* Theme Toggle & Mobile Menu */}
           <div className="flex items-center space-x-4">
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={toggleLanguage}
+              className="w-10 h-10"
+              title={language === 'en' ? 'Switch to Chinese' : '切换到英文'}
+            >
+              <Globe className="h-5 w-5" />
+            </Button>
+
             <Button
               variant="outline"
               size="icon"

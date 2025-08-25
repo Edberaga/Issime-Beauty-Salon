@@ -1,31 +1,34 @@
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useLanguage, translations } from '@/hooks/useLanguage';
 import heroSalon from '@/assets/hero-salon.jpg';
 import spaImage from '@/assets/spa-treatment.jpg';
 import antiAgingImage from '@/assets/anti-aging.jpg';
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const language = useLanguage();
+  const t = translations[language];
 
   const slides = [
     {
       image: heroSalon,
-      title: "Issime Beauty Salon",
-      subtitle: "Where Elegance Meets Natural Beauty",
-      description: "As a trusted beauty salon in Malaysia, Issime offers luxurious treatments designed to enhance your natural glow and relax your senses in style."
+      title: t.hero.title1,
+      subtitle: t.hero.subtitle1,
+      description: t.hero.description1
     },
     {
       image: spaImage,
-      title: "Spa & Full Body Massage",
-      subtitle: "Relax, Rejuvenate, Recharge",
-      description: "Indulge in calming spa rituals and our signature full body massage, tailored to melt away stress and leave you feeling deeply restored."
+      title: t.hero.title2,
+      subtitle: t.hero.subtitle2,
+      description: t.hero.description2
     },
     {
       image: antiAgingImage,
-      title: "Anti-Aging Treatments",
-      subtitle: "Naturally Youthful, Radiantly You",
-      description: "Advanced skincare treatments for youthful-looking skin. Experience our anti aging treatments for youthful skin that glows from within."
+      title: t.hero.title3,
+      subtitle: t.hero.subtitle3,
+      description: t.hero.description3
     }
   ];
 
@@ -88,7 +91,7 @@ const Hero = () => {
                   onClick={() => window.open('https://wa.link/wg0gmt', '_blank')}
                     className="btn-luxury animate-fade-in-up"
                   >
-                    Make Appointment
+                    {t.hero.makeAppointment}
                   </Button>
                 </div>
               </div>

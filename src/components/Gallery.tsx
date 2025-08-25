@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { X } from 'lucide-react';
 import { FaRegCirclePlay } from 'react-icons/fa6';
+import { useLanguage, translations } from '@/hooks/useLanguage';
 import reel1 from '@/assets/issime_beauty_reels_1.jpg';
 import reel2 from '@/assets/issime_beauty_reels_2.png';
 import reel3 from '@/assets/issime_beauty_reels_3.jpg';
@@ -14,6 +15,8 @@ import { Button } from './ui/button';
 
 const Gallery = () => {
   const sectionRef = useRef<HTMLElement>(null);
+  const language = useLanguage();
+  const t = translations[language];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -97,14 +100,13 @@ const Gallery = () => {
       <div className="container mx-auto lg:px-[8%] md:px-[8%] px-5">
         <div className="text-center mb-16">
           <h1 className='text-s font-bold font-barlow text-primary uppercase mb-3 scroll-animate'>
-            Gallery
+            {t.gallery.sectionTitle}
           </h1>
           <h2 className="text-4xl md:text-5xl font-playfair mb-6 scroll-animate">
-             Real Treatment Experiences
+            {t.gallery.title}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto scroll-animate">
-            Take a visual tour of our beautiful salon space, treatment rooms, and the serene 
-            environment we've created for your ultimate relaxation and beauty experience.
+            {t.gallery.description}
           </p>
         </div>
 

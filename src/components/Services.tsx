@@ -1,12 +1,15 @@
 import { useEffect, useRef } from 'react';
 import { Clock, Star, Leaf, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useLanguage, translations } from '@/hooks/useLanguage';
 import antiAgingImage from '@/assets/anti_aging.jpeg';
 import massageImage from '@/assets/full_body_message.jpeg';
 import spaImage from '@/assets/face_cleansing.webp';
 
 const Services = () => {
   const sectionRef = useRef<HTMLElement>(null);
+  const language = useLanguage();
+  const t = translations[language];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -28,24 +31,24 @@ const Services = () => {
 
   const services = [
     {
-      title: "Anti-Aging Treatments",
-      description: "Advanced facial treatments designed to reduce signs of aging and promote youthful",
+      title: t.services.antiAging,
+      description: t.services.antiAgingDesc,
       image: antiAgingImage,
       duration: "60-90 mins",
       features: ["Collagen Boost", "Wrinkle Reduction", "Skin Tightening", "Hydration Therapy"],
       icon: <Zap className="w-6 h-6" />
     },
     {
-      title: "Full Body Massage",
-      description: "Relaxing and therapeutic full body massage to relieve tension and promote overall wellness.",
+      title: t.services.fullBodyMassage,
+      description: t.services.massageDesc,
       image: massageImage,
       duration: "60-90 mins",
       features: ["Deep Tissue", "Swedish Massage", "Hot Stone", "Aromatherapy"],
       icon: <Leaf className="w-6 h-6" />
     },
     {
-      title: "Natural Face Cleansing",
-      description: "Gentle, natural facial cleansing treatments that purify and nourish your skin for a healthy glow.",
+      title: t.services.faceCleansing,
+      description: t.services.cleansingDesc,
       image: spaImage,
       duration: "45-60 mins",
       features: ["Deep Cleansing", "Exfoliation", "Moisturizing", "Natural Products"],
@@ -58,14 +61,13 @@ const Services = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h1 className='text-s font-bold font-barlow text-primary uppercase mb-3 scroll-animate'>
-            Our Services
+            {t.services.sectionTitle}
           </h1>
           <h2 className="text-4xl md:text-5xl font-playfair mb-6 scroll-animate">
-            From Full Body Massage to Anti-Aging
+            {t.services.title}
           </h2>
           <p className="text-lg text-foreground font-lato max-w-3xl mx-auto scroll-animate">
-            Discover our comprehensive range of beauty and wellness services, each designed to enhance 
-            your natural beauty and promote relaxation and rejuvenation.
+            {t.services.description}
           </p>
         </div>
 
@@ -108,7 +110,7 @@ const Services = () => {
                   </div>
                   
                   <Button className="w-full btn-luxury mt-auto">
-                    Book Now
+                    {t.services.bookNow}
                   </Button>
                 </div>
               </div>

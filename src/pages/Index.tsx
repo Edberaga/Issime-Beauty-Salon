@@ -4,8 +4,8 @@ import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Services from '@/components/Services';
 import Gallery from '@/components/Gallery';
-import Team from '@/components/Team';
-import Products from '@/components/Products';
+// import Team from '@/components/Team';
+// import Products from '@/components/Products';
 import Location from '@/components/Location';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -66,8 +66,8 @@ const Index = () => {
         <About />
         <Services />
         <Gallery />
-        <Team />
-        <Products />
+        {/* <Team /> */}
+        {/* <Products /> */}
         <Location />
       </main>
       <Footer />

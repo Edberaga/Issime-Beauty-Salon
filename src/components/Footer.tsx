@@ -1,8 +1,12 @@
 import { MapPin, Phone, Mail, Clock, Heart } from 'lucide-react';
+import { useLanguage, translations } from '@/hooks/useLanguage';
 import issimeLogo from '@/assets/issime-logo.jpg';
 
 const Footer = () => {
   const curYear = new Date().getFullYear();
+  const language = useLanguage();
+  const t = translations[language];
+  
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -22,11 +26,11 @@ const Footer = () => {
               className="h-16 w-auto mb-3 m-auto"
             />
             <p className="text-muted-foreground mb-3">
-              Your premier destination for holistic natural therapy and luxury beauty treatments in Johor Bahru, Malaysia.
+              {t.footer.description}
             </p>
             <div className="flex justify-center item-center text-sm font-barlow text-muted-foreground">
               <Heart className="w-4 h-4 mr-2 text-primary" />
-              <span>Serving clients with love since 2019</span>
+              <span>{t.footer.servingClients}</span>
             </div>
           </div>
 
@@ -104,7 +108,7 @@ const Footer = () => {
         <div className="border-t border-border mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-center items-center">
             <p className="text-muted-foreground text-sm">
-              Copyright © {curYear} Issime Beauty Salon. All rights reserved | Powered by <b>Trendify Media</b>
+              {t.footer.copyright} {curYear} Issime Beauty Salon. All rights reserved | Powered by <b>Trendify Media</b>
             </p>
           </div>
         </div>
