@@ -8,8 +8,10 @@ import Gallery from '@/components/Gallery';
 // import Products from '@/components/Products';
 import Location from '@/components/Location';
 import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
-import ScrollToTop from '@/components/ScrollToTop';
+import WhatsAppButton from '@/components/buttons/WhatsAppButton';
+import ScrollToTop from '@/components/buttons/ScrollToTop';
+import FacebookButton from '@/components/buttons/FacebookButton';
+import InstagramButton from '@/components/buttons/InstagramButton';
 
 const Index = () => {
   useEffect(() => {
@@ -72,6 +74,8 @@ const Index = () => {
       </main>
       <Footer />
       <WhatsAppButton />
+      <FacebookButton/>
+      <InstagramButton/>
       <ScrollToTop />
     </div>
   );
