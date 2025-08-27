@@ -1,14 +1,14 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-interface UIState {
+interface UiState {
   isDarkMode: boolean;
   isMenuOpen: boolean;
   isScrollTopVisible: boolean;
   currentSection: string;
 }
 
-const initialState: UIState = {
-  isDarkMode: window.matchMedia('(prefers-color-scheme: dark)').matches,
+const initialState: UiState = {
+  isDarkMode: false,
   isMenuOpen: false,
   isScrollTopVisible: false,
   currentSection: 'home',
@@ -49,4 +49,5 @@ export const {
   setScrollTopVisible,
   setCurrentSection,
 } = uiSlice.actions;
+
 export default uiSlice.reducer;
