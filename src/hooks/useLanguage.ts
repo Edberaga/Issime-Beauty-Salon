@@ -98,7 +98,7 @@ export const translations = {
     // Hero Section
     hero: {
       subtitle1: "优雅与自然美的完美结合",
-      title1: "伊诗美美容院",
+      title1: "Issime Beauty Salon",
       description1: "作为马来西亚值得信赖的美容院，伊诗美提供奢华的护理服务，旨在增强您的自然光彩，让您的感官在时尚中得到放松。",
       subtitle2: "放松、恢复活力、充电",
       title2: "水疗和全身按摩",
@@ -175,8 +175,8 @@ export const translations = {
     },
     // SEO
     seo: {
-      title: "伊诗美美容院 - 马来西亚顶级美容院 | 抗衰老护理和全身按摩",
-      description: "马来西亚新山伊诗美美容院提供顶级抗衰老护理、全身按摩和天然面部清洁，让肌肤焕发青春光彩。立即预约我们的整体自然疗法服务！",
+      title: "Issime Beauty Salon - 马来西亚顶级美容院 | 抗衰老护理和全身按摩",
+      description: "Issime Beauty Salon、全身按摩和天然面部清洁，让肌肤焕发青春光彩。立即预约我们的整体自然疗法服务！",
       keywords: "伊诗美美容院, 马来西亚美容院, 抗衰老护理, 全身按摩, 天然面部清洁, 整体自然疗法, 新山水疗, 马来西亚美容护理, 美容沙龙, 护肤治疗"
     }
   }

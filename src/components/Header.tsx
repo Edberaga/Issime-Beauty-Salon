@@ -1,50 +1,46 @@
 import { useState, useEffect } from 'react';
 import { Moon, Sun, Menu, X, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { useAppSelector } from '@/hooks/useAppSelector';
+import issimeLogo from '@/assets/issime-logo.jpg';
+import { useLanguage } from '@/hooks/useLanguage';
 import { useAppDispatch } from '@/hooks/useAppDispatch';
 import { toggleLanguage } from '@/store/slices/languageSlice';
-import { toggleDarkMode, toggleMenu, setMenuOpen } from '@/store/slices/uiSlice';
-import { translations } from '@/hooks/useLanguage';
-import issimeLogo from '@/assets/issime-logo.jpg';
 
 const Header = () => {
+  const [isDark, setIsDark] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const language = useLanguage();
   const dispatch = useAppDispatch();
-  const { currentLanguage } = useAppSelector((state) => state.language);
-  const { isDarkMode, isMenuOpen } = useAppSelector((state) => state.ui);
-  const t = translations[currentLanguage];
 
   useEffect(() => {
-    // Check system preference
-    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    dispatch(setDarkMode(isDarkMode));
-    document.documentElement.classList.toggle('dark', isDarkMode);
-  }, [dispatch]);
+  }, []);
 
-  const handleToggleTheme = () => {
-    dispatch(toggleDarkMode());
+  const toggleTheme = () => {
+    const newTheme = !isDark;
+    setIsDark(newTheme);
+    document.documentElement.classList.toggle('dark', newTheme);
   };
 
   const handleToggleLanguage = () => {
     dispatch(toggleLanguage());
   };
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-    dispatch(setMenuOpen(false));
+    setIsMenuOpen(false);
   };
 
   const navItems = [
-    { name: currentLanguage === 'en' ? 'Home' : '首页', id: 'home' },
-    { name: currentLanguage === 'en' ? 'About' : '关于我们', id: 'about' },
-    { name: currentLanguage === 'en' ? 'Services' : '服务项目', id: 'services' },
-    { name: currentLanguage === 'en' ? 'Gallery' : '画廊', id: 'gallery' },
+    { name: language === 'en' ? 'Home' : '首页', id: 'home' },
+    { name: language === 'en' ? 'About' : '关于我们', id: 'about' },
+    { name: language === 'en' ? 'Services' : '服务项目', id: 'services' },
+    { name: language === 'en' ? 'Gallery' : '画廊', id: 'gallery' },
     // { name: language === 'en' ? 'Team' : '团队', id: 'team' },
     // { name: language === 'en' ? 'Products' : '产品', id: 'products' },
-    { name: currentLanguage === 'en' ? 'Location' : '位置', id: 'location' },
+    { name: language === 'en' ? 'Location' : '位置', id: 'location' },
   ];
 
   return (
@@ -79,19 +75,20 @@ const Header = () => {
               variant="outline"
               size="icon"
               onClick={handleToggleLanguage}
-              className="w-10 h-10"
-              title={currentLanguage === 'en' ? 'Switch to Chinese' : '切换到英文'}
+              className="w-[65px] h-10"
+              title={language === 'en' ? 'Switch to Chinese' : '切换到英文'}
             >
               <Globe className="h-5 w-5" />
+              <span className='text-base font-bold uppercase'>{language}</span>
             </Button>
 
             <Button
               variant="outline"
               size="icon"
-              onClick={handleToggleTheme}
+              onClick={toggleTheme}
               className="w-10 h-10"
             >
-              {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+              {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </Button>
 
             {/* Mobile Menu Button */}
@@ -99,7 +96,7 @@ const Header = () => {
               variant="outline"
               size="icon"
               className="md:hidden w-10 h-10"
-              onClick={() => dispatch(toggleMenu())}
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
