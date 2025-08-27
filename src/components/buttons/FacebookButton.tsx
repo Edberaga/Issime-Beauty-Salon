@@ -7,10 +7,12 @@ function FacebookButton() {
         href='https://www.facebook.com/Issime.beauty'
         target='_blank'
         rel="noopener noreferrer"
-        aria-label="View Issime Beauty Salon Facebook"
-        className='bg-blue-800 md:p-4 p-3 rounded-full text-white hover:bg-blue-900 transition-all duration-300 hover:scale-110 shadow-lg flex justify-center items-center'
+        aria-label="Visit Issime Beauty Salon Facebook page"
+        title="Follow Issime Beauty Salon on Facebook"
+        className='bg-blue-800 md:p-4 p-3 rounded-full text-white hover:bg-blue-900 transition-all duration-300 hover:scale-110 shadow-lg flex justify-center items-center group'
       >
-        <FaFacebook className="md:h-6 md:w-6 h-5 w-5" />
+        <FaFacebook className="md:h-6 md:w-6 h-5 w-5 group-hover:scale-105 transition-transform duration-200"/>
+        <span className="sr-only">Issime Beauty Salon Facebook</span>
       </a>
     </div>
   )

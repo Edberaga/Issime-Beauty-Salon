@@ -9,6 +9,7 @@ const WhatsAppButton = () => {
         rel="noopener noreferrer"
         className="bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 hover:scale-110 flex items-center justify-center md:p-4 p-3"
         aria-label="Contact Issime Beauty Salon via WhatsApp"
+        title="Chat Issime Beauty Salon on WhatsApp"
       >
         <FaWhatsapp className="md:w-6 md:h-6 w-5 h-5" />
       </a>
