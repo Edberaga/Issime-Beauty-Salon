@@ -1,28 +1,17 @@
+import { describe, test, beforeEach, expect, vi } from 'vitest';
 import languageReducer, { setLanguage, toggleLanguage } from '../slices/languageSlice';
-
-// Mock localStorage
-const localStorageMock = {
-  getItem: jest.fn(),
-  setItem: jest.fn(),
-  removeItem: jest.fn(),
-  clear: jest.fn(),
-};
-global.localStorage = localStorageMock;
 
 // Mock document
 Object.defineProperty(document, 'documentElement', {
   value: {
-    setAttribute: jest.fn(),
+    setAttribute: vi.fn(),
   },
   writable: true,
 });
 
-// Mock window.dispatchEvent
-global.dispatchEvent = jest.fn();
-
 describe('languageSlice', () => {
   beforeEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   test('should return the initial state', () => {
