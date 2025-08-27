@@ -1,10 +1,11 @@
+import { describe, test, expect } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 import { BrowserRouter } from 'react-router-dom';
 import Header from '../Header';
-import languageReducer from '../../store/slices/languageSlice';
-import uiReducer from '../../store/slices/uiSlice';
+import languageReducer from '@/store/slices/languageSlice';
+import uiReducer from '@/store/slices/uiSlice';
 
 const createTestStore = (initialState = {}) => {
   return configureStore({

@@ -1,8 +1,9 @@
+import { describe, test, beforeEach, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import WhatsAppButton from '../buttons/WhatsAppButton';
 
 // Mock window.open
-const mockOpen = jest.fn();
+const mockOpen = vi.fn();
 Object.defineProperty(window, 'open', {
   writable: true,
   value: mockOpen,
