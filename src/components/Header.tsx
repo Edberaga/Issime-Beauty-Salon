@@ -37,7 +37,7 @@ const Header = () => {
     { name: language === 'en' ? 'Home' : '首页', id: 'home' },
     { name: language === 'en' ? 'About' : '关于我们', id: 'about' },
     { name: language === 'en' ? 'Services' : '服务项目', id: 'services' },
-    { name: language === 'en' ? 'Gallery' : '画廊', id: 'gallery' },
+    { name: language === 'en' ? 'Video' : '视频', id: 'gallery' },
     // { name: language === 'en' ? 'Team' : '团队', id: 'team' },
     // { name: language === 'en' ? 'Products' : '产品', id: 'products' },
     { name: language === 'en' ? 'Location' : '位置', id: 'location' },
@@ -52,6 +52,7 @@ const Header = () => {
             <img 
               src={issimeLogo} 
               alt="Issime Beauty Salon" 
+              loading="lazy"
               className="h-12 w-auto"
             />
           </div>
@@ -77,6 +78,7 @@ const Header = () => {
               onClick={handleToggleLanguage}
               className="w-[65px] h-10"
               title={language === 'en' ? 'Switch to Chinese' : '切换到英文'}
+              aria-label={language === 'en' ? 'Switch to Chinese' : '切换到英文'}
             >
               <Globe className="h-5 w-5" />
               <span className='text-base font-bold uppercase'>{language}</span>
@@ -87,6 +89,8 @@ const Header = () => {
               size="icon"
               onClick={toggleTheme}
               className="w-10 h-10"
+              aria-label={isDark ? 'Toggle dark mode' : 'Toggle light mode'}
+              title={isDark ? 'Toggle dark mode' : 'Toggle light mode'}
             >
               {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </Button>
@@ -97,6 +101,8 @@ const Header = () => {
               size="icon"
               className="md:hidden w-10 h-10"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+              title={isMenuOpen ? 'Close menu' : 'Open menu'}
             >
               {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
@@ -105,13 +111,15 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-card border-b border-border z-[9996]">
+          <div title='Mobile Menu Section' aria-label='Mobile Menu Section' className="md:hidden absolute top-full left-0 right-0 bg-card border-b border-border z-[9996]">
             <nav className="flex flex-col py-4">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
                   className="text-left px-4 py-3 text-foreground hover:text-primary hover:bg-muted transition-colors duration-300"
+                  aria-label={item.name}
+                  title={item.name}
                 >
                   {item.name}
                 </button>

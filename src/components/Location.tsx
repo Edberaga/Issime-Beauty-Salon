@@ -52,11 +52,13 @@ const Location = () => {
                 <img
                   src={img1}
                   alt="Issime Beauty Salon exterior - Beauty Salon in Malaysia"
+                  loading="lazy"
                   className="lg:w-[49%] w-full h-48 object-cover rounded-none"
                 />
                 <img
                   src={img2}
                   alt="Issime Beauty Salon exterior - Beauty Salon in Malaysia"
+                  loading="lazy"
                   className="lg:w-[49%] w-full h-48 object-cover rounded-none"
                 />
               </div>
@@ -64,6 +66,7 @@ const Location = () => {
                 <img
                   src={salonExterior}
                   alt="Issime Beauty Salon storefront"
+                  loading="lazy"
                   className="w-full h-96 object-cover rounded-none"
                 />
               </div>
@@ -73,7 +76,7 @@ const Location = () => {
           {/* Contact Information */}
           <div className="w-full scroll-animate">
             <div className="bg-card rounded-2xl p-8 shadow-lg">
-              <h3 className="text-3xl font-bold mb-8">{t.location.contactInfo}</h3>
+              <h3 className="text-3xl font-bold mb-8 font-playfair">{t.location.contactInfo}</h3>
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
@@ -107,9 +110,9 @@ const Location = () => {
                   <div className="bg-primary/10 p-3 rounded-full">
                     <Phone className="w-6 h-6 text-primary" />
                   </div>
-                  <div>
+                  <div onClick={() => window.open('tel:+60127343939', '_blank', 'noreferrer')}>
                     <h4 className="font-semibold mb-2">{t.location.phone}</h4>
-                    <p className="text-muted-foreground">+60 12-345 6789</p>
+                    <p className="text-muted-foreground">+60 12-734 3939</p>
                   </div>
                 </div>
 
@@ -117,7 +120,7 @@ const Location = () => {
                   <div className="bg-primary/10 p-3 rounded-full">
                     <Mail className="w-6 h-6 text-primary" />
                   </div>
-                  <div>
+                  <div onClick={() => window.open('mailto:info@issimebeauty.com', '_blank', 'noreferrer')}>
                     <h4 className="font-semibold mb-2">{t.location.email}</h4>
                     <p className="text-muted-foreground">info@issimebeauty.com</p>
                   </div>
@@ -146,7 +149,7 @@ const Location = () => {
         {/* Google Maps */}
         <div className="scroll-animate">
           <div className="bg-card rounded-2xl p-6 shadow-lg">
-            <h3 className="text-2xl font-bold mb-6 text-center">{t.location.findOnMap}</h3>
+            <h2 className="text-2xl font-bold mb-6 text-center font-playfair">{t.location.findOnMap}</h2>
             <div className="relative h-96 rounded-xl overflow-hidden">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.434821739867!2d103.7312!3d1.4655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da7266d1b4b6d1%3A0x8b8b8b8b8b8b8b8b!2sJalan%20Mutiara%20Emas%2010%2C%20Taman%20Mount%20Austin%2C%2081100%20Johor%20Bahru%2C%20Johor%2C%20Malaysia!5e0!3m2!1sen!2smy!4v1635123456789!5m2!1sen!2smy"

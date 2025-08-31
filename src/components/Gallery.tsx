@@ -5,10 +5,10 @@ import { useLanguage, translations } from '@/hooks/useLanguage';
 import reel1 from '@/assets/issime_beauty_reels_1.jpg';
 import reel2 from '@/assets/issime_beauty_reels_2.png';
 import reel3 from '@/assets/issime_beauty_reels_3.jpg';
-import reel4 from '@/assets/issime_beauty_reels_4.jpg';
+import reel4 from '@/assets/issime_beauty_reels_4.png';
 import reel5 from '@/assets/issime_beauty_reels_5.jpg';
 import reel6 from '@/assets/issime_beauty_reels_6.jpg';
-import reel7 from '@/assets/issime_beauty_reels_7.jpg';
+import reel7 from '@/assets/issime_beauty_reels_7.png';
 import reel8 from '@/assets/issime_beauty_reels_8.jpg';
 import { Button } from './ui/button';
 
@@ -39,58 +39,58 @@ const Gallery = () => {
   const galleryImages = [
     {
       src: reel1,
-      alt: "Issime Beauty Salon",
-      title: "You are beautiful! Very beauty! Because you have come Issime!",
-      desc: "Our Korean-style hot stone therapy can help you. We are also currently offering a complimentary lymphatic detox session! Leave a message now to book your treatment or contact us.",
+      alt: "Issime Beauty Salon - Issime Beauty Salon",
+      title: t.gallery.image1.title,
+      desc: t.gallery.image1.desc,
       url: "https://www.facebook.com/reel/1863289187448223"
     },
     {
       src: reel2,
-      alt: "Legs Sore Treatment",
-      title: "Legs Sore for Standing all day.",
-      desc: "My legs used to swell and hurt after work, but now they feel so much better! The therapist's technique is extremely professional;",
+      alt: "Legs Sore Treatment - Issime Beauty Salon",
+      title: t.gallery.image2.title,
+      desc: t.gallery.image2.desc,
       url: "https://www.facebook.com/reel/1907211520092123"
     },
     {
       src: reel3,
-      alt: "Stone Leg Treatment",
-      title: "Hot Stone Leg Treatment.",
-      desc: "My stubby legs have turned into long legs 😱 Later I discovered it was due to accumulated toxins causing #leg swelling! Fortunately, I went to Issime Beauty to experience their Hot Stone Leg Treatment.",
+      alt: "Stone Leg Treatment - Issime Beauty Salon",
+      title: t.gallery.image3.title,
+      desc: t.gallery.image3.desc,
       url: "https://www.facebook.com/reel/953074759699525/?s=fb_shorts_profile&stack_idx=0"
     },
     {
       src: reel4,
-      alt: "Head Massage therapy",
-      title: "Korean hot stone therapy!",
-      desc: "If you are facing insomnia, migraines, eye fatigue, or poor complexion 🤫 you definitely need to experience Korean hot stone therapy! It helps eliminate toxins from the head, clear blockages in the head, and instantly liberate your head, making the entire head more relaxed 😘",
+      alt: "Head Massage therapy - Issime Beauty Salon",
+      title: t.gallery.image4.title,
+      desc: t.gallery.image4.desc,
       url: "https://www.facebook.com/reel/387559177424419/?s=fb_shorts_profile&stack_idx=0"
     },
     {
       src: reel5,
-      alt: "Issimei Beauty Salon",
-      title: "The looks of Issimei Beauty Salon",
-      desc: "When care becomes the norm, beauty also becomes the norm 🫶🏻",
+      alt: "Issimei Beauty Salon - Issime Beauty Salon",
+      title: t.gallery.image5.title,
+      desc: t.gallery.image5.desc,
       url: "https://www.facebook.com/reel/3543028002644998/?s=fb_shorts_profile&stack_idx=0"
     },
     {
       src: reel6,
-      alt: "Full Body Message Theraphy",
-      title: "Issime Beauty Message Theraphy",
-      desc: "Don't hold in your anger anymore 😫 This treatment can actually improve bloating and constipation issues, say goodbye to discomfort!",
+      alt: "Full Body Message Therapy - Issime Beauty Salon",
+      title: t.gallery.image6.title,
+      desc: t.gallery.image6.desc,
       url: "https://www.facebook.com/Issime.beauty/videos/820396712949244/"
     },
     {
       src: reel7,
-      alt: "Anti Aging Treatment",
-      title: "Anti Aging Treatment",
-      desc: "Many women use Korean-style hot stone acupressure to drive away humidity, coldness, and relieve backaches and soreness, and it also has the effect of #anti-aging and #reversingaging",
-      url: "https://www.facebook.com/Issime.beauty/videos/1112662229733338"
+      alt: "Anti Aging Treatment - Issime Beauty Salon",
+      title: t.gallery.image7.title,
+      desc: t.gallery.image7.desc,
+      url: "https://web.facebook.com/reel/2137580776739910"
     },
     {
       src: reel8,
-      alt: "Full Body Treatment",
-      title: "Full Body Treatment",
-      desc: "#Insomnia and headache❓ Done in 1 hour ✅ #Turned those calf muscles into #longlegs❓ Done in 1 hour ✅ #Hand pain, #numbness, #tightness❓ Done in 1 hour ✅ You heard it right😱 We will show you results in just 1 hour ✅",
+      alt: "Full Body Treatment - Issime Beauty Salon",
+      title: t.gallery.image8.title,
+      desc: t.gallery.image8.desc,
       url: "https://www.facebook.com/Issime.beauty/videos/436154132700374"
     },
   ];
@@ -114,13 +114,14 @@ const Gallery = () => {
           {galleryImages.map((image, index) => (
             <div
               key={index}
-              className="scroll-animate cursor-pointer group relative overflow-hidden rounded-xl "
+              className="scroll-animate cursor-pointer group relative overflow-hidden rounded-xl h-[90%] "
               onClick={() => window.open(image.url)}
             >
               <div className="relative">
                 <img
                   src={image.src}
                   alt={image.alt}
+                  loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 "
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors duration-300" />
@@ -133,6 +134,8 @@ const Gallery = () => {
                       size='icon'
                       className='w-8 h-8 md:w-10 md:h-10 my-1 md:my-2 rounded-full'
                       onClick={() => window.open(image.url)}
+                      title='View Video'
+                      aria-label='View Video'
                     >
                       <FaRegCirclePlay className="h-3 w-3 md:h-5 md:w-5" />
                     </Button>

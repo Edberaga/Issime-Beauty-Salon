@@ -23,6 +23,7 @@ const Footer = () => {
             <img 
               src={issimeLogo} 
               alt="Issime Beauty Salon" 
+              loading="lazy"
               className="h-16 w-auto mb-3 m-auto"
             />
             <p className="text-muted-foreground mb-3">

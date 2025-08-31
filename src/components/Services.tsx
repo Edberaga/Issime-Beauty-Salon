@@ -2,9 +2,9 @@ import { useEffect, useRef } from 'react';
 import { Clock, Star, Leaf, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage, translations } from '@/hooks/useLanguage';
-import antiAgingImage from '@/assets/anti_aging.jpeg';
-import massageImage from '@/assets/full_body_message.jpeg';
-import spaImage from '@/assets/face_cleansing.webp';
+import antiAgingImage from '@/assets/anti_aging.png';
+import massageImage from '@/assets/korean_hot_stone.webp';
+import spaImage from '@/assets/mud_massage.png';
 
 const Services = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -35,7 +35,7 @@ const Services = () => {
       description: t.services.antiAgingDesc,
       image: antiAgingImage,
       duration: "60-90 mins",
-      features: ["Collagen Boost", "Wrinkle Reduction", "Skin Tightening", "Hydration Therapy"],
+      features: t.services.antiAgingFeatures,
       icon: <Zap className="w-6 h-6" />
     },
     {
@@ -43,7 +43,7 @@ const Services = () => {
       description: t.services.massageDesc,
       image: massageImage,
       duration: "60-90 mins",
-      features: ["Deep Tissue", "Swedish Massage", "Hot Stone", "Aromatherapy"],
+      features: t.services.hotStoneFeatures,
       icon: <Leaf className="w-6 h-6" />
     },
     {
@@ -51,7 +51,7 @@ const Services = () => {
       description: t.services.cleansingDesc,
       image: spaImage,
       duration: "45-60 mins",
-      features: ["Deep Cleansing", "Exfoliation", "Moisturizing", "Natural Products"],
+      features: t.services.mudBellyFeatures,
       icon: <Star className="w-6 h-6" />
     }
   ];
@@ -79,6 +79,7 @@ const Services = () => {
                   <img
                     src={service.image}
                     alt={`${service.title} - Issime Beauty Salon Malaysia`}
+                    loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
@@ -109,7 +110,7 @@ const Services = () => {
                     ))}
                   </div>
                   
-                  <Button className="w-full btn-luxury mt-auto">
+                  <Button onClick={() => window.open('https://wa.link/wg0gmt', '_blank')} className="w-full btn-luxury mt-auto">
                     {t.services.bookNow}
                   </Button>
                 </div>
@@ -120,16 +121,16 @@ const Services = () => {
 
         <div className="text-center mt-16 scroll-animate">
           <h3 className="text-2xl font-bold font-playfair mb-4">
-            Ready to Experience Our Services?
+            {t.services.readyTitle}
           </h3>
           <p className="text-foreground font-lato mb-8">
-            Contact us today to schedule your appointment and begin your journey to beauty and wellness.
+            {t.services.readyDesc}
           </p>
           <Button 
             className="btn-luxury px-10 py-8 text-lg"
             onClick={() => window.open('https://wa.link/wg0gmt', '_blank')}
           >
-            Contact Us on WhatsApp
+            {t.services.contactWhatsApp}
           </Button>
         </div>
       </div>
