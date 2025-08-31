@@ -36,6 +36,7 @@ const ScrollToTop = () => {
           isScrollTopVisible ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
         aria-label="Scroll to top"
+        title="Scroll to top"
       >
         <ChevronUp className="md:w-5 md:h-5 w-3 h-3" />
       </button>

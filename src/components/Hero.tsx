@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { useLanguage, translations } from '@/hooks/useLanguage';
 import heroSalon from '@/assets/hero-salon.jpg';
 import spaImage from '@/assets/spa-treatment.jpg';
-import antiAgingImage from '@/assets/anti-aging.jpg';
+import mudBellyImage from '@/assets/mud_belly_theraphy.png';
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -25,7 +25,7 @@ const Hero = () => {
       description: t.hero.description2
     },
     {
-      image: antiAgingImage,
+      image: mudBellyImage,
       title: t.hero.title3,
       subtitle: t.hero.subtitle3,
       description: t.hero.description3
@@ -35,7 +35,7 @@ const Hero = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 15000);
+    }, 150000);
 
     return () => clearInterval(timer);
   }, [slides.length]);
@@ -71,6 +71,7 @@ const Hero = () => {
               <img
                 src={slide.image}
                 alt={`Issime Beauty Salon - ${slide.title}`}
+                loading="lazy"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-black/60" />
@@ -88,7 +89,9 @@ const Hero = () => {
                     {slide.description}
                   </p>
                   <Button
-                  onClick={() => window.open('https://wa.link/wg0gmt', '_blank')}
+                    aria-label='Make Appointment'
+                    title='Make Appointment'
+                    onClick={() => window.open('https://wa.link/wg0gmt', '_blank')}
                     className="btn-luxury animate-fade-in-up"
                   >
                     {t.hero.makeAppointment}
@@ -102,12 +105,16 @@ const Hero = () => {
 
       {/* Navigation Arrows */}
       <button
+        aria-label='Previous Slide'
+        title='Previous Slide'
         onClick={prevSlide}
         className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300"
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
       <button
+        aria-label='Next Slide'
+        title='Next Slide'
         onClick={nextSlide}
         className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300"
       >
@@ -115,13 +122,15 @@ const Hero = () => {
       </button>
 
       {/* Slide Indicators */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-2">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-5">
         {slides.map((_, index) => (
           <button
             key={index}
+            aria-label={`Go to slide ${index + 1}`}
+            title={`Go to slide ${index + 1}`}
             onClick={() => setCurrentSlide(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide ? 'bg-white' : 'bg-white/50'
+              index === currentSlide ? 'bg-white scale-115' : 'bg-white/50 scale-90'
             }`}
           />
         ))}
