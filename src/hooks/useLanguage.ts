@@ -14,12 +14,12 @@ export const translations = {
       subtitle1: "Where Elegance Meets Natural Beauty",
       title1: "Issime Beauty Salon",
       description1: "As a trusted beauty salon in Malaysia, Issime offers luxurious treatments designed to enhance your natural glow and relax your senses in style.",
-      subtitle2: "Relax, Rejuvenate, Recharge",
-      title2: "Spa & Full Body Massage",
-      description2: "Indulge in calming spa rituals and our signature full body massage, tailored to melt away stress and leave you feeling deeply restored.",
-      subtitle3: "Naturally Youthful, Radiantly You",
-      title3: "Anti-Aging Treatments",
-      description3: "Advanced skincare treatments for youthful-looking skin. Experience our anti aging treatments for youthful skin that glows from within.",
+      subtitle2: "Relaxation Through Heat",
+      title2: "Korean Hot Stone Therapy",
+      description2: "Traditional Korean wellness treatment that uses heated stones to improve circulation, relieve muscle tension, and promote deep relaxation.",
+      subtitle3: "Detox & Firming Care",
+      title3: "Intestinal Mud Mask Care",
+      description3: "A therapeutic mud mask applied to the lower abdomen to support digestion, reduce bloating, and help firm and tone the belly area.",
       makeAppointment: "Make Appointment"
     },
     // About Section
@@ -50,20 +50,57 @@ export const translations = {
       description: "Discover our comprehensive range of beauty and wellness services, each designed to enhance your natural beauty and promote relaxation and rejuvenation.",
       antiAging: "Anti-Aging Treatments",
       antiAgingDesc: "Advanced facial treatments designed to reduce signs of aging and promote youthful",
-      fullBodyMassage: "Full Body Massage",
+      fullBodyMassage: "Korea Hot Stone Theraphy",
       massageDesc: "Relaxing and therapeutic full body massage to relieve tension and promote overall wellness.",
-      faceCleansing: "Natural Face Cleansing",
-      cleansingDesc: "Gentle, natural facial cleansing treatments that purify and nourish your skin for a healthy glow.",
+      faceCleansing: "Intestinal Mud Belly Care",
+      cleansingDesc: "A therapeutic mud mask applied to the lower abdomen to support digestion, reduce bloating, and help firm and tone the belly area.",
+      // Service Features
+      antiAgingFeatures: ["Collagen Boost", "Wrinkle Reduction", "Skin Tightening", "Hydration Therapy"],
+      hotStoneFeatures: ["Heated Stones", "Deep Tissue", "Circulation Boost", "Muscle Relaxation"],
+      mudBellyFeatures: ["Digestive Support", "Bloating Reduction", "Belly Firming", "Detoxification"],
       bookNow: "Book Now",
       readyTitle: "Ready to Experience Our Services?",
       readyDesc: "Contact us today to schedule your appointment and begin your journey to beauty and wellness.",
       contactWhatsApp: "Contact Us on WhatsApp"
     },
-    // Gallery Section
+    // Video Section
     gallery: {
-      sectionTitle: "Gallery",
+      sectionTitle: "Video",
       title: "Real Treatment Experiences",
-      description: "Take a visual tour of our beautiful salon space, treatment rooms, and the serene environment we've created for your ultimate relaxation and beauty experience."
+      description: "Take a visual tour of our beautiful salon space, treatment rooms, and the serene environment we've created for your ultimate relaxation and beauty experience.",
+      // Gallery Images
+      image1: {
+        title: "You are beautiful! Very beauty! Because you have come Issime!",
+        desc: "Our Korean-style hot stone therapy can help you. We are also currently offering a complimentary lymphatic detox session! Leave a message now to book your treatment or contact us."
+      },
+      image2: {
+        title: "Legs Sore for Standing all day.",
+        desc: "My legs used to swell and hurt after work, but now they feel so much better! The therapist's technique is extremely professional."
+      },
+      image3: {
+        title: "Hot Stone Leg Treatment.",
+        desc: "My stubby legs have turned into long legs. Later I discovered it was due to accumulated toxins causing leg swelling! Fortunately, I went to Issime Beauty to experience their Hot Stone Leg Treatment."
+      },
+      image4: {
+        title: "Korean hot stone therapy!",
+        desc: "If you are facing insomnia, migraines, eye fatigue, or poor complexion, you definitely need to experience Korean hot stone therapy! It helps eliminate toxins from the head, clear blockages in the head, and instantly liberate your head, making the entire head more relaxed."
+      },
+      image5: {
+        title: "The looks of Issimei Beauty Salon",
+        desc: "When care becomes the norm, beauty also becomes the norm."
+      },
+      image6: {
+        title: "Issime Beauty Message Therapy",
+        desc: "Don't hold in your anger anymore. This treatment can actually improve bloating and constipation issues, say goodbye to discomfort!"
+      },
+      image7: {
+        title: "Anti Aging Treatment",
+        desc: "Sometimes, we are not old; we are just tired in the face, our complexion has faded, and our emotions are stuck. Give yourself a chance for a deep breath — Issimei Beauty's Facial Moxibustion Meridian Care."
+      },
+      image8: {
+        title: "Full Body Treatment",
+        desc: "Insomnia and headache? Done in 1 hour. Turned those calf muscles into long legs? Done in 1 hour. Hand pain, numbness, tightness? Done in 1 hour. You heard it right. We will show you results in just 1 hour."
+      }
     },
     // Location Section
     location: {
@@ -100,12 +137,12 @@ export const translations = {
       subtitle1: "优雅与自然美的完美结合",
       title1: "Issime Beauty Salon",
       description1: "作为马来西亚值得信赖的美容院，伊诗美提供奢华的护理服务，旨在增强您的自然光彩，让您的感官在时尚中得到放松。",
-      subtitle2: "放松、恢复活力、充电",
-      title2: "水疗和全身按摩",
-      description2: "沉浸在宁静的水疗仪式和我们的招牌全身按摩中，专为消除压力而定制，让您感到深度恢复。",
-      subtitle3: "自然年轻，光彩照人",
-      title3: "抗衰老护理",
-      description3: "先进的护肤护理，让肌肤看起来年轻。体验我们的抗衰老护理，让肌肤从内而外焕发光彩。",
+      subtitle2: "通过热量放松身心",
+      title2: "韩国热石疗法",
+      description2: "传统韩国养生疗法，使用加热的石头改善血液循环，缓解肌肉紧张，促进深度放松。",
+      subtitle3: "排毒与紧致护理",
+      title3: "肠道泥膜腹部护理",
+      description3: "将治疗性泥膜涂抹在下腹部，支持消化，减少腹胀，帮助紧致和塑形腹部区域。",
       makeAppointment: "预约"
     },
     // About Section
@@ -136,20 +173,57 @@ export const translations = {
       description: "探索我们全面的美容和健康服务，每项服务都旨在增强您的自然美丽，促进放松和恢复活力。",
       antiAging: "抗衰老护理",
       antiAgingDesc: "先进的面部护理，旨在减少衰老迹象并促进年轻",
-      fullBodyMassage: "全身按摩",
-      massageDesc: "放松和治疗性全身按摩，缓解紧张并促进整体健康。",
-      faceCleansing: "天然面部清洁",
-      cleansingDesc: "温和的天然面部清洁护理，净化和滋养您的肌肤，带来健康光泽。",
+      fullBodyMassage: "韩国热石疗法",
+      massageDesc: "传统韩国养生疗法，使用加热的石头改善血液循环，缓解肌肉紧张，促进深度放松。",
+      faceCleansing: "肠道泥膜腹部护理",
+      cleansingDesc: "将治疗性泥膜涂抹在下腹部，支持消化，减少腹胀，帮助紧致和塑形腹部区域。",
+      // Service Features
+      antiAgingFeatures: ["胶原蛋白提升", "皱纹减少", "肌肤紧致", "补水疗法"],
+      hotStoneFeatures: ["热石疗法", "深层组织", "血液循环", "肌肉放松"],
+      mudBellyFeatures: ["消化支持", "减少腹胀", "腹部紧致", "排毒"],
       bookNow: "立即预约",
       readyTitle: "准备体验我们的服务了吗？",
       readyDesc: "今天就联系我们安排您的预约，开始您的美丽和健康之旅。",
       contactWhatsApp: "通过WhatsApp联系我们"
     },
-    // Gallery Section
+    // Video Section
     gallery: {
-      sectionTitle: "画廊",
+      sectionTitle: "视频",
       title: "真实护理体验",
-      description: "参观我们美丽的沙龙空间、护理室和我们为您的终极放松和美容体验创造的宁静环境。"
+      description: "参观我们美丽的沙龙空间、护理室和我们为您的终极放松和美容体验创造的宁静环境。",
+      // Gallery Images
+      image1: {
+        title: "你很美！非常美丽！因为你来到了伊诗美！",
+        desc: "我们的韩国式热石疗法可以帮助您。我们目前还提供免费的淋巴排毒疗程！立即留言预约您的护理或联系我们。"
+      },
+      image2: {
+        title: "整天站立导致腿部酸痛。",
+        desc: "我的腿以前下班后会肿胀疼痛，但现在感觉好多了！治疗师的技术非常专业。"
+      },
+      image3: {
+        title: "热石腿部护理。",
+        desc: "我的粗腿变成了长腿。后来我发现这是由于积累的毒素导致腿部肿胀！幸运的是，我去了伊诗美美容院体验他们的热石腿部护理。"
+      },
+      image4: {
+        title: "韩国热石疗法！",
+        desc: "如果您面临失眠、偏头痛、眼疲劳或面色不佳，您绝对需要体验韩国热石疗法！它有助于消除头部毒素，清除头部阻塞，立即解放您的头部，让整个头部更加放松。"
+      },
+      image5: {
+        title: "伊诗美美容院的外观",
+        desc: "当护理成为常态时，美丽也成为了常态。"
+      },
+      image6: {
+        title: "伊诗美美容按摩疗法",
+        desc: "不要再压抑您的愤怒了。这种护理实际上可以改善腹胀和便秘问题，告别不适！"
+      },
+      image7: {
+        title: "抗衰老护理",
+        desc: "有时，我们并不老；我们只是面部疲惫，面色暗淡，情绪受阻。给自己一个深呼吸的机会——伊诗美美容的面部艾灸经络护理。"
+      },
+      image8: {
+        title: "全身护理",
+        desc: "失眠和头痛？1小时完成。将小腿肌肉变成长腿？1小时完成。手部疼痛、麻木、紧绷？1小时完成。您没听错。我们将在1小时内向您展示效果。"
+      }
     },
     // Location Section
     location: {
