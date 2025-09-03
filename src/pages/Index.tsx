@@ -3,8 +3,10 @@ import { useLanguage, translations } from '@/hooks/useLanguage';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
+import SSM from '@/components/SSM';
 import Services from '@/components/Services';
 import Gallery from '@/components/Gallery';
+import FAQ from '@/components/FAQ';
 // import Team from '@/components/Team';
 // import Products from '@/components/Products';
 import Location from '@/components/Location';
@@ -85,8 +87,10 @@ const Index = () => {
       <main>
         <Hero />
         <About />
+        <SSM />
         <Services />
         <Gallery />
+        <FAQ />
         {/* <Team /> */}
         {/* <Products /> */}
         <Location />
