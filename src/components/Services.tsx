@@ -3,7 +3,7 @@ import { Clock, Star, Leaf, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage, translations } from '@/hooks/useLanguage';
 import antiAgingImage from '@/assets/anti_aging.png';
-import massageImage from '@/assets/korean_hot_stone.webp';
+import massageImage from '@/assets/korean_theraphy.png';
 import spaImage from '@/assets/mud_massage.png';
 
 const Services = () => {
