@@ -124,6 +124,62 @@ export const translations = {
       servingClients: "Serving clients with love since 2019",
       copyright: "Copyright © 2025 Issime Beauty Salon. All rights reserved | Powered by"
     },
+    // SSM Section
+    ssm: {
+      title: "Registered & Certified with SSM Malaysia",
+      subtitle: "Your Trust, Our Commitment",
+      description: "Issime Beauty Salon is a legally registered company in Malaysia under the Suruhanjaya Syarikat Malaysia (SSM). Our official business registration reflects our commitment to professionalism, transparency, and customer trust. When you choose Issime Beauty Salon, you are assured that you are receiving services from a certified and legitimate beauty salon dedicated to quality and integrity.",
+      legallyRegistered: "Legally Registered",
+      ssmCertified: "SSM Certified"
+    },
+    // FAQ Section
+    faq: {
+      sectionTitle: "COMMON QUESTIONS",
+      title: "Most Popular Questions",
+      description: "Here, we've compiled answers to some of the most common queries we receive. If you have a question that's not covered here, please feel free to reach out to our customer support team for personalized assistance.",
+      questions: [
+        {
+          question: "What makes Issime Beauty different from other beauty salons?",
+          answer: "At Issime Beauty, we combine natural therapies with advanced techniques to improve both beauty and wellness. Every treatment is done in a private room, ensuring maximum comfort, hygiene, and relaxation."
+        },
+        {
+          question: "What signature services does Issime Beauty offer?",
+          answer: "We specialize in three signature treatments:\n• Korean Hot Stone Therapy (back, hand, and foot) to relieve stiffness, improve circulation, and ease water retention.\n• Intestinal Mud Detox Care to reduce bloating, support digestion, and ease gastric discomfort.\n• Facial Meridian Massage to lift contours, reduce puffiness, and improve skin glow naturally."
+        },
+        {
+          question: "What are the benefits of Korean Hot Stone Therapy?",
+          answer: "Hot Stone Therapy combines heated stones with massage techniques to:\n• Relieve muscle stiffness and fatigue\n• Improve blood circulation and detoxification\n• Reduce water retention and swelling\n• Ease stress and tension for overall relaxation"
+        },
+        {
+          question: "How does Intestinal Mud Detox Care help with bloating?",
+          answer: "This therapy uses warm essential oils and a volcanic mud wrap to:\n• Draw out trapped gas, cold, and dampness\n• Relieve stomach bloating and tightness\n• Improve gut circulation and digestion\n• Support a lighter and more comfortable feeling"
+        },
+        {
+          question: "What is Facial Meridian Massage and how is it different from a normal facial?",
+          answer: "Facial Meridian Massage is an acupressure and meridian therapy that:\n• Stimulates circulation and lymphatic drainage\n• Reduces facial puffiness and water retention\n• Lifts and defines jawline and cheekbones\n• Improves elasticity and natural radiance\nUnlike standard facials, it works from inside out to address root causes of dullness and sagging."
+        },
+        {
+          question: "Are your treatments safe and relaxing?",
+          answer: "Yes, absolutely. All treatments are carried out by professional therapists in private rooms using premium essential oils, volcanic mud, and heated stones. Each therapy is tailored to your body's condition for safe and effective results."
+        },
+        {
+          question: "Can I customize my beauty or wellness package?",
+          answer: "Yes, Issime Beauty offers flexible and customizable packages so you can combine treatments like Hot Stone Therapy, Mud Detox, and Facial Meridian Massage depending on your personal wellness goals."
+        },
+        {
+          question: "Do you use premium or natural products?",
+          answer: "Yes. We use high-quality essential oils, volcanic mud, and natural therapy tools. Combined with advanced Korean and Taiwanese equipment, our products are safe and effective for skin, scalp, and body."
+        },
+        {
+          question: "How does Issime Beauty stay updated with the latest trends?",
+          answer: "Our team is trained regularly in Taiwan and Korea, and we use the latest high-end machines and techniques that many salons cannot provide. This ensures our treatments remain modern, safe, and effective."
+        },
+        {
+          question: "How can I book an appointment at Issime Beauty?",
+          answer: "Booking is easy. You can contact us via:\n• 📲 WhatsApp: http://www.wasap.my/60127343939\n• 📍 Visit our salon directly: G85-01, Jalan Mutiara Emas 10/2, Taman Mount Austin, Johor Bahru."
+        }
+      ]
+    },
     // SEO
     seo: {
       title: "Issime Beauty Salon - Premium Beauty Salon in Malaysia | Anti Aging Treatments & Full Body Massage",
@@ -246,6 +302,62 @@ export const translations = {
       description: "您在马来西亚新山进行整体自然疗法和奢华美容护理的首选目的地。",
       servingClients: "自2019年以来用爱为客户服务",
       copyright: "版权所有 © 2025 伊诗美美容院。保留所有权利 | 技术支持"
+    },
+    // SSM Section
+    ssm: {
+      title: "在马来西亚SSM注册并获得认证",
+      subtitle: "您的信任，我们的承诺",
+      description: "伊诗美美容院是在马来西亚公司委员会（SSM）下合法注册的公司。我们的官方商业注册反映了我们对专业精神、透明度和客户信任的承诺。当您选择伊诗美美容院时，您可以放心，您正在接受来自致力于质量和诚信的认证合法美容院的服务。",
+      legallyRegistered: "合法注册",
+      ssmCertified: "SSM认证"
+    },
+    // FAQ Section
+    faq: {
+      sectionTitle: "常见问题",
+      title: "最受欢迎的问题",
+      description: "在这里，我们整理了收到的一些最常见问题的答案。如果您的问题没有在这里得到解答，请随时联系我们的客户支持团队以获得个性化帮助。",
+      questions: [
+        {
+          question: "伊诗美美容院与其他美容院有什么不同？",
+          answer: "在伊诗美美容院，我们将自然疗法与先进技术相结合，以改善美丽和健康。每次护理都在私人房间进行，确保最大的舒适度、卫生和放松。"
+        },
+        {
+          question: "伊诗美美容院提供哪些特色服务？",
+          answer: "我们专门提供三种特色护理：\n• 韩国热石疗法（背部、手部和足部）以缓解僵硬，改善血液循环，缓解水分滞留。\n• 肠道泥膜排毒护理以减少腹胀，支持消化，缓解胃部不适。\n• 面部经络按摩以提升轮廓，减少浮肿，自然改善肌肤光泽。"
+        },
+        {
+          question: "韩国热石疗法有哪些好处？",
+          answer: "热石疗法将加热的石头与按摩技术相结合：\n• 缓解肌肉僵硬和疲劳\n• 改善血液循环和排毒\n• 减少水分滞留和肿胀\n• 缓解压力和紧张，实现整体放松"
+        },
+        {
+          question: "肠道泥膜排毒护理如何帮助缓解腹胀？",
+          answer: "这种疗法使用温热的精油和火山泥包裹：\n• 排出滞留的气体、寒气和湿气\n• 缓解胃部腹胀和紧绷感\n• 改善肠道血液循环和消化\n• 支持更轻盈和舒适的感觉"
+        },
+        {
+          question: "什么是面部经络按摩，它与普通面部护理有什么不同？",
+          answer: "面部经络按摩是一种穴位按压和经络疗法：\n• 刺激血液循环和淋巴引流\n• 减少面部浮肿和水分滞留\n• 提升和定义下颌线和颧骨\n• 改善弹性和自然光泽\n与标准面部护理不同，它从内到外工作，解决暗沉和下垂的根本原因。"
+        },
+        {
+          question: "您的护理安全且放松吗？",
+          answer: "是的，绝对安全。所有护理都由专业治疗师在私人房间进行，使用优质精油、火山泥和热石。每种疗法都根据您的身体状况量身定制，确保安全有效的结果。"
+        },
+        {
+          question: "我可以定制我的美容或健康套餐吗？",
+          answer: "是的，伊诗美美容院提供灵活和可定制的套餐，您可以根据个人健康目标组合热石疗法、泥膜排毒和面部经络按摩等护理。"
+        },
+        {
+          question: "您使用优质或天然产品吗？",
+          answer: "是的。我们使用高质量的精油、火山泥和天然疗法工具。结合先进的韩国和台湾设备，我们的产品对皮肤、头皮和身体安全有效。"
+        },
+        {
+          question: "伊诗美美容院如何保持与最新趋势的同步？",
+          answer: "我们的团队定期在台湾和韩国接受培训，我们使用许多美容院无法提供的最新高端机器和技术。这确保我们的护理保持现代、安全和有效。"
+        },
+        {
+          question: "我如何在伊诗美美容院预约？",
+          answer: "预约很简单。您可以通过以下方式联系我们：\n• 📲 WhatsApp: http://www.wasap.my/60127343939\n• 📍 直接访问我们的美容院：G85-01, Jalan Mutiara Emas 10/2, Taman Mount Austin, Johor Bahru。"
+        }
+      ]
     },
     // SEO
     seo: {
