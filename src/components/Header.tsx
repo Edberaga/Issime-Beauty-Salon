@@ -40,6 +40,7 @@ const Header = () => {
     { name: language === 'en' ? 'Video' : '视频', id: 'gallery' },
     // { name: language === 'en' ? 'Team' : '团队', id: 'team' },
     // { name: language === 'en' ? 'Products' : '产品', id: 'products' },
+    { name: language === 'en' ? 'FAQ' : '问答', id: 'faq' },
     { name: language === 'en' ? 'Location' : '位置', id: 'location' },
   ];
 
