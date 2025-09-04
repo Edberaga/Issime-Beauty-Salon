@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { CheckCircle } from 'lucide-react';
 import { useLanguage, translations } from '@/hooks/useLanguage';
+import ssmImage from '@/assets/ssm.jpg';
 
 const SSM = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -33,7 +34,7 @@ const SSM = () => {
           <div className="scroll-animate">
             <div className="md:ml-24 relative md:w-[75%]">
               <img
-                src="/src/assets/ssm.jpg"
+                src={ssmImage}
                 alt="SSM Certificate of Incorporation"
                 className=" h-auto rounded-2xl shadow-2xl"
               />
